@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsor — CityFest</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sponsors.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+        <span class="navbar__logo-name">🎶 CityFest</span>
+        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html">Lineup</a></li>
+        <li><a href="menu.html">Menù</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sponsors.html" class="active">Sponsor</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn-secondary">Find Us</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="lineup.html" role="menuitem">Lineup</a>
+      <a href="menu.html" role="menuitem">Menù</a>
+      <a href="gallery.html" role="menuitem">Gallery</a>
+      <a href="sponsors.html" role="menuitem">Sponsor</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="sponsors-hero" aria-label="Sponsors hero">
+    <div class="sponsors-hero__dots"></div>
+    <div class="container sponsors-hero__inner">
+      <div class="sponsors-hero__eyebrow">
+        <span>🤝</span> CityFest 2025
+      </div>
+      <h1>I nostri <span>Sponsor</span></h1>
+      <p class="sponsors-hero__sub">
+        CityFest è possibile grazie al supporto di queste realtà straordinarie che credono nella cultura, nella comunità e nel buon cibo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TIER 1 — MAIN SPONSOR
+       One headline sponsor, full-width
+       prominence with glow treatment.
+       HOW TO EDIT:
+       - Replace "sponsor/main-sponsor.png" with your logo file
+       - Replace "Nome Sponsor" with the real name
+       - Replace href="#" with the sponsor's website URL
+  ══════════════════════════════════ -->
+  <section class="tier tier--main" aria-labelledby="main-sponsor-title">
+    <div class="container">
+
+      <div class="tier__header">
+        <div class="tier__badge">⭐ Main Sponsor</div>
+        <h2 class="tier__title" id="main-sponsor-title">Il nostro partner principale</h2>
+        <p class="tier__desc">Il grande sostenitore che rende possibile tutta la magia di CityFest.</p>
+      </div>
+
+      <!--
+        MAIN SPONSOR
+        - src: path to logo in /sponsor/ folder
+        - href: link to website or social
+        - Edit name and description below
+      -->
+      <a href="#" target="_blank" rel="noopener noreferrer"
+        class="main-sponsor-card" aria-label="Visita il sito di [Nome Sponsor]">
+
+        <div class="main-sponsor-card__logo-wrap">
+          <!--
+            When ready, replace the placeholder div below with:
+            <img src="sponsor/main-sponsor.png" alt="Logo [Nome Sponsor]" />
+          -->
+          <div class="sponsor-logo-placeholder">Logo<br>Main Sponsor</div>
+        </div>
+
+        <div class="main-sponsor-card__info">
+          <p class="main-sponsor-card__name">[Nome Sponsor]</p>
+          <p class="main-sponsor-card__desc">
+            Breve descrizione dello sponsor — cosa fanno, perché supportano il festival, cosa rappresentano per la comunità locale.
+          </p>
+          <span class="main-sponsor-card__link">
+            Visita il sito →
+          </span>
+        </div>
+
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TIER 2 — GOLD SPONSORS
+       Up to ~6 sponsors in a 3-col grid.
+       Duplicate .gold-card blocks to add more.
+       HOW TO EDIT:
+       - Replace src in <img> with your logo path
+       - Set href to the sponsor's URL
+       - Update name and url label
+  ══════════════════════════════════ -->
+  <section class="tier tier--gold" aria-labelledby="gold-sponsor-title">
+    <div class="container">
+
+      <div class="tier__header">
+        <div class="tier__badge">🥇 Gold Sponsor</div>
+        <h2 class="tier__title" id="gold-sponsor-title">Partner Gold</h2>
+        <p class="tier__desc">Le realtà che sostengono con forza la nostra missione e fanno sì che la festa non si fermi mai.</p>
+      </div>
+
+      <div class="gold-grid">
+
+        <!--
+          GOLD SPONSOR 1
+          href: sponsor website or social
+          img src: file in /sponsor/ folder
+        -->
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="gold-card" aria-label="Visita il sito di [Nome Gold 1]">
+          <div class="gold-card__logo-wrap">
+            <!--
+              Replace with:
+              <img src="sponsor/gold-01.png" alt="Logo [Nome Gold 1]" />
+            -->
+            <div class="sponsor-logo-placeholder">Logo Gold 1</div>
+          </div>
+          <p class="gold-card__name">[Nome Gold 1]</p>
+          <p class="gold-card__url">🔗 www.esempio.it</p>
+        </a>
+
+        <!-- GOLD SPONSOR 2 -->
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="gold-card" aria-label="Visita il sito di [Nome Gold 2]">
+          <div class="gold-card__logo-wrap">
+            <div class="sponsor-logo-placeholder">Logo Gold 2</div>
+          </div>
+          <p class="gold-card__name">[Nome Gold 2]</p>
+          <p class="gold-card__url">🔗 www.esempio.it</p>
+        </a>
+
+        <!-- GOLD SPONSOR 3 -->
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="gold-card" aria-label="Visita il sito di [Nome Gold 3]">
+          <div class="gold-card__logo-wrap">
+            <div class="sponsor-logo-placeholder">Logo Gold 3</div>
+          </div>
+          <p class="gold-card__name">[Nome Gold 3]</p>
+          <p class="gold-card__url">🔗 www.esempio.it</p>
+        </a>
+
+        <!--
+          Add more Gold sponsors by copying a .gold-card block above.
+          The grid handles up to 6 cards cleanly (2 rows of 3).
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TIER 3 — COMMUNITY SPONSORS
+       Compact logo mosaic, can hold many.
+       On hover logos go from monochrome → colour.
+       HOW TO EDIT:
+       - Replace src in <img> with your logo
+       - Set href to the sponsor's URL
+       - Duplicate .community-card to add more
+  ══════════════════════════════════ -->
+  <section class="tier tier--community" aria-labelledby="community-sponsor-title">
+    <div class="container">
+
+      <div class="tier__header">
+        <div class="tier__badge">🤝 Community Sponsor</div>
+        <h2 class="tier__title" id="community-sponsor-title">Sponsor Community</h2>
+        <p class="tier__desc">Ogni contributo conta. Grazie a tutte le realtà locali che ci danno una mano.</p>
+      </div>
+
+      <div class="community-grid">
+
+        <!--
+          COMMUNITY SPONSOR — copy this block for each sponsor
+          href: website or social link
+          img src: file in /sponsor/ folder (shown in colour on hover)
+        -->
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 1]">
+          <!--
+            Replace with:
+            <img src="sponsor/community-01.png" alt="Logo [Nome Community 1]" />
+          -->
+          <div class="sponsor-logo-placeholder">Community 1</div>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 2]">
+          <div class="sponsor-logo-placeholder">Community 2</div>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 3]">
+          <div class="sponsor-logo-placeholder">Community 3</div>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 4]">
+          <div class="sponsor-logo-placeholder">Community 4</div>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 5]">
+          <div class="sponsor-logo-placeholder">Community 5</div>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="community-card" aria-label="[Nome Community 6]">
+          <div class="sponsor-logo-placeholder">Community 6</div>
+        </a>
+
+        <!--
+          Add as many community sponsors as needed — the flex layout
+          wraps automatically and centres remaining items on the last row.
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       BECOME A SPONSOR CTA
+  ══════════════════════════════════ -->
+  <section class="sponsor-cta" aria-label="Diventa sponsor">
+    <div class="container">
+      <div class="sponsor-cta__inner">
+        <h2>Vuoi diventare sponsor?</h2>
+        <p>Unisciti alle realtà che sostengono CityFest e metti il tuo brand al centro di quattro giorni di musica, cibo e comunità.</p>
+        <a href="contact.html" class="btn">Contattaci →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">🎶 CityFest</div>
+          <p class="footer__brand-desc">Quattro giorni di cibo, musica e buon umore nel cuore della città. Ingresso libero, per tutti.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Esplora</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineup.html">Lineup</a></li>
+            <li><a href="menu.html">Menù</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsors.html">Sponsor</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Accessibilità</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Volontari</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contatti</p>
+          <div class="footer__contact-item"><span>📍</span><span>Piazza Grande, Centro</span></div>
+          <div class="footer__contact-item"><span>📅</span><span>[DATA INIZIO] – [DATA FINE]</span></div>
+          <div class="footer__contact-item"><span>✉️</span><span>hello@cityfest.com</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 CityFest. Tutti i diritti riservati.</p>
+        <nav class="footer__bottom-links" aria-label="Link legali">
+          <a href="#">Privacy</a>
+          <a href="#">Cookie</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

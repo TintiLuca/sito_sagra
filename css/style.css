@@ -1,0 +1,253 @@
+/* ============================================
+   CITY FESTIVAL — Global Design System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  /* Colors */
+  --coral:        #FF5733;
+  --orange:       #FF8C42;
+  --yellow:       #FFD166;
+  --teal:         #06A77D;
+  --teal-dark:    #048A68;
+  --terracotta:   #C1440E;
+  --saffron:      #F4A623;
+  --cream:        #FFF8F0;
+  --dark:         #1A1A2E;
+  --dark-soft:    #2D2D44;
+  --white:        #FFFFFF;
+  --gray:         #6B7280;
+  --gray-light:   #F3F0EC;
+
+  /* Typography */
+  --font-display: 'Boogaloo', cursive;
+  --font-serif:   'Fraunces', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Border radius */
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 2px 4px 0px rgba(26,26,46,0.15);
+  --shadow-md: 4px 8px 0px rgba(26,26,46,0.15);
+  --shadow-lg: 6px 12px 0px rgba(26,26,46,0.15);
+
+  /* Transitions */
+  --transition: 0.2s ease;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--dark-soft);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul { list-style: none; }
+
+/* ── Layout Utilities ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header h2 {
+  color: var(--dark);
+  margin-bottom: var(--space-sm);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2.5px solid var(--dark);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: var(--coral);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--dark);
+}
+
+/* ── Tags / Badges ── */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--dark);
+}
+
+.tag-vegan    { background: #DCFCE7; color: #166534; }
+.tag-gluten   { background: #FEF9C3; color: #713F12; }
+.tag-spicy    { background: #FEE2E2; color: #991B1B; }
+.tag-music    { background: var(--teal);    color: var(--white); }
+.tag-food     { background: var(--saffron); color: var(--dark);  }
+
+/* ── Decorative squiggles / shapes ── */
+.squiggle {
+  display: inline-block;
+  width: 60px;
+  height: 6px;
+  background: var(--coral);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Page Hero (shared across inner pages) ── */
+.page-hero {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: calc(80px + var(--space-2xl)) 0 var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(255,87,51,0.25) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 30%, rgba(255,209,102,0.2) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.page-hero h1 {
+  color: var(--yellow);
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--coral); border-radius: 4px; }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.95); opacity: 0; }
+  60%  { transform: scale(1.03); }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* ── Responsive helpers ── */
+@media (max-width: 768px) {
+  .section { padding: var(--space-2xl) 0; }
+  .container { padding: 0 var(--space-md); }
+}

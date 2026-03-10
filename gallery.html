@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — CityFest</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+        <span class="navbar__logo-name">🎶 CityFest</span>
+        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html">Lineup</a></li>
+        <li><a href="menu.html">Menù</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn-secondary">Find Us</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="lineup.html" role="menuitem">Lineup</a>
+      <a href="menu.html" role="menuitem">Menù</a>
+      <a href="gallery.html" role="menuitem">Gallery</a>
+      <a href="sponsors.html" role="menuitem">Sponsors</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="gallery-hero" aria-label="Gallery hero">
+    <div class="gallery-hero__dots"></div>
+    <div class="container gallery-hero__inner">
+      <div class="gallery-hero__eyebrow">
+        <span>📸</span> CityFest 2025
+      </div>
+      <h1>La <span>Gallery</span></h1>
+      <p class="gallery-hero__sub">Momenti rubati, sapori immortalati, vibrazioni che non si dimenticano.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FILTER BAR
+  ══════════════════════════════════ -->
+  <div class="gallery-filters" role="toolbar" aria-label="Filtra le foto">
+    <div class="gallery-filters__inner">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">
+        🎉 Tutte <span class="filter-count" id="total-count">18</span>
+      </button>
+      <button class="filter-btn" data-filter="music" aria-pressed="false">
+        🎵 Musica
+      </button>
+      <button class="filter-btn" data-filter="food" aria-pressed="false">
+        🍽️ Cibo
+      </button>
+      <button class="filter-btn" data-filter="vibes" aria-pressed="false">
+        ✨ Atmosfera
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       GALLERY BODY
+  ══════════════════════════════════ -->
+  <main class="gallery-body">
+    <div class="container">
+
+      <div class="gallery-meta">
+        <p class="gallery-meta__count">
+          Mostrando <strong id="gallery-count">18</strong> foto
+        </p>
+      </div>
+
+      <!--
+        HOW TO ADD PHOTOS:
+        1. Put your image files in the /foto/ folder
+        2. Replace data-src="foto/your-photo.jpg" on each item
+        3. Replace data-emoji with any emoji (shown as placeholder if image not found)
+        4. Set data-category to: music | food | vibes
+        5. Set data-title and data-sub for the lightbox caption
+        6. Set the placeholder height via style="height: Xpx" to match your image ratio
+        7. To add more photos: copy a .masonry-item block and fill in the data attributes
+      -->
+
+      <div class="masonry" role="list" aria-label="Galleria fotografica">
+
+        <!-- ── ROW GROUP 1 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-01.jpg"
+          data-emoji="🎸"
+          data-title="The Groove Collective"
+          data-sub="Main Stage · Giovedì sera"
+          aria-label="Apri foto: The Groove Collective">
+          <div class="masonry-item__placeholder" style="height:300px">🎸</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>The Groove Collective</strong>
+              Main Stage · Giovedì sera
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-01.jpg"
+          data-emoji="🌮"
+          data-title="Spatzle panna e speck"
+          data-sub="Stand Primi Piatti"
+          aria-label="Apri foto: Spatzle panna e speck">
+          <div class="masonry-item__placeholder" style="height:220px">🌮</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Spatzle panna e speck</strong>
+              Stand Primi Piatti
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-01.jpg"
+          data-emoji="✨"
+          data-title="Piazza Grande al tramonto"
+          data-sub="Giovedì · Ore 20:00"
+          aria-label="Apri foto: Piazza Grande al tramonto">
+          <div class="masonry-item__placeholder" style="height:260px">✨</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Piazza Grande al tramonto</strong>
+              Giovedì · Ore 20:00
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <!-- ── ROW GROUP 2 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-02.jpg"
+          data-emoji="🍝"
+          data-title="Bigoli al sugo d'anatra"
+          data-sub="Stand Primi Piatti"
+          aria-label="Apri foto: Bigoli al sugo d'anatra">
+          <div class="masonry-item__placeholder" style="height:240px">🍝</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Bigoli al sugo d'anatra</strong>
+              Stand Primi Piatti
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-02.jpg"
+          data-emoji="🎷"
+          data-title="Elena Vasquez"
+          data-sub="Main Stage · Venerdì sera"
+          aria-label="Apri foto: Elena Vasquez">
+          <div class="masonry-item__placeholder" style="height:340px">🎷</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Elena Vasquez</strong>
+              Main Stage · Venerdì sera
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-02.jpg"
+          data-emoji="🌙"
+          data-title="Serata sotto le stelle"
+          data-sub="Venerdì notte"
+          aria-label="Apri foto: Serata sotto le stelle">
+          <div class="masonry-item__placeholder" style="height:200px">🌙</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Serata sotto le stelle</strong>
+              Venerdì notte
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <!-- ── ROW GROUP 3 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-03.jpg"
+          data-emoji="🥁"
+          data-title="Drumline Riot"
+          data-sub="Main Stage · Sabato sera"
+          aria-label="Apri foto: Drumline Riot">
+          <div class="masonry-item__placeholder" style="height:280px">🥁</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Drumline Riot</strong>
+              Main Stage · Sabato sera
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-03.jpg"
+          data-emoji="🥩"
+          data-title="Grigliata mista"
+          data-sub="Stand Secondi Piatti"
+          aria-label="Apri foto: Grigliata mista">
+          <div class="masonry-item__placeholder" style="height:230px">🥩</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Grigliata mista</strong>
+              Stand Secondi Piatti
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-03.jpg"
+          data-emoji="🎉"
+          data-title="Il pubblico del sabato"
+          data-sub="Sabato · Main Stage"
+          aria-label="Apri foto: Il pubblico del sabato">
+          <div class="masonry-item__placeholder" style="height:310px">🎉</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Il pubblico del sabato</strong>
+              Sabato · Main Stage
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <!-- ── ROW GROUP 4 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-04.jpg"
+          data-emoji="🧀"
+          data-title="Piatto di Formaggi"
+          data-sub="Stand Secondi · Selezione locale"
+          aria-label="Apri foto: Piatto di Formaggi">
+          <div class="masonry-item__placeholder" style="height:250px">🧀</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Piatto di Formaggi</strong>
+              Stand Secondi · Selezione locale
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-04.jpg"
+          data-emoji="🌅"
+          data-title="Alba di domenica"
+          data-sub="L'ultimo giorno comincia così"
+          aria-label="Apri foto: Alba di domenica">
+          <div class="masonry-item__placeholder" style="height:260px">🌅</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Alba di domenica</strong>
+              L'ultimo giorno comincia così
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-04.jpg"
+          data-emoji="🎤"
+          data-title="The Neon Wolves"
+          data-sub="Closing Set · Domenica"
+          aria-label="Apri foto: The Neon Wolves">
+          <div class="masonry-item__placeholder" style="height:290px">🎤</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>The Neon Wolves</strong>
+              Closing Set · Domenica
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <!-- ── ROW GROUP 5 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-05.jpg"
+          data-emoji="🍺"
+          data-title="Birra artigianale"
+          data-sub="Stand Bevande"
+          aria-label="Apri foto: Birra artigianale">
+          <div class="masonry-item__placeholder" style="height:220px">🍺</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Birra artigianale</strong>
+              Stand Bevande
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-05.jpg"
+          data-emoji="👨‍👩‍👧‍👦"
+          data-title="Famiglie in festa"
+          data-sub="Domenica pomeriggio"
+          aria-label="Apri foto: Famiglie in festa">
+          <div class="masonry-item__placeholder" style="height:270px">👨‍👩‍👧‍👦</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Famiglie in festa</strong>
+              Domenica pomeriggio
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-05.jpg"
+          data-emoji="🎵"
+          data-title="Backstage moments"
+          data-sub="Dietro le quinte"
+          aria-label="Apri foto: Backstage moments">
+          <div class="masonry-item__placeholder" style="height:240px">🎵</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Backstage moments</strong>
+              Dietro le quinte
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <!-- ── ROW GROUP 6 ── -->
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="food"
+          data-src="foto/food-06.jpg"
+          data-emoji="🍦"
+          data-title="Dolci di Come a Casa"
+          data-sub="Stand Dolci"
+          aria-label="Apri foto: Dolci di Come a Casa">
+          <div class="masonry-item__placeholder" style="height:230px">🍦</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Dolci di "Come a Casa"</strong>
+              Stand Dolci
+            </div>
+          </div>
+          <span class="masonry-item__cat">🍽️ Cibo</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="vibes"
+          data-src="foto/vibes-06.jpg"
+          data-emoji="🌆"
+          data-title="Luci della sera"
+          data-sub="Piazza Grande · Notte"
+          aria-label="Apri foto: Luci della sera">
+          <div class="masonry-item__placeholder" style="height:300px">🌆</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Luci della sera</strong>
+              Piazza Grande · Notte
+            </div>
+          </div>
+          <span class="masonry-item__cat">✨ Atmosfera</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+        <div class="masonry-item" role="listitem" tabindex="0"
+          data-category="music"
+          data-src="foto/music-06.jpg"
+          data-emoji="🎶"
+          data-title="Il palco prima dello show"
+          data-sub="Soundcheck · Main Stage"
+          aria-label="Apri foto: Il palco prima dello show">
+          <div class="masonry-item__placeholder" style="height:260px">🎶</div>
+          <div class="masonry-item__overlay">
+            <div class="masonry-item__caption">
+              <strong>Il palco prima dello show</strong>
+              Soundcheck · Main Stage
+            </div>
+          </div>
+          <span class="masonry-item__cat">🎵 Musica</span>
+          <span class="masonry-item__zoom">🔍</span>
+        </div>
+
+      </div>
+      <!-- END MASONRY -->
+
+      <!-- Empty state -->
+      <div class="gallery-empty" aria-live="polite">
+        <div class="gallery-empty__icon">🔍</div>
+        <p>Nessuna foto in questa categoria.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════
+       LIGHTBOX
+  ══════════════════════════════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore foto">
+    <div class="lightbox__inner">
+
+      <button id="lb-close" class="lightbox__close" aria-label="Chiudi">✕</button>
+      <button id="lb-prev"  class="lightbox__prev"  aria-label="Foto precedente">‹</button>
+      <button id="lb-next"  class="lightbox__next"  aria-label="Foto successiva">›</button>
+
+      <div class="lightbox__img-wrap">
+        <img id="lb-img" class="lightbox__img" src="" alt="" />
+        <div id="lb-placeholder" class="lightbox__placeholder" style="display:none"></div>
+      </div>
+
+      <div class="lightbox__info">
+        <p id="lb-title" class="lightbox__title"></p>
+        <p id="lb-sub"   class="lightbox__sub"></p>
+        <p id="lb-counter" class="lightbox__counter"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">🎶 CityFest</div>
+          <p class="footer__brand-desc">Quattro giorni di cibo, musica e buon umore nel cuore della città. Ingresso libero, per tutti.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Esplora</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineup.html">Lineup</a></li>
+            <li><a href="menu.html">Menù</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Accessibilità</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Volontari</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contatti</p>
+          <div class="footer__contact-item"><span>📍</span><span>Piazza Grande, Centro</span></div>
+          <div class="footer__contact-item"><span>📅</span><span>[DATA INIZIO] – [DATA FINE]</span></div>
+          <div class="footer__contact-item"><span>✉️</span><span>hello@cityfest.com</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 CityFest. Tutti i diritti riservati.</p>
+        <nav class="footer__bottom-links" aria-label="Link legali">
+          <a href="#">Privacy</a>
+          <a href="#">Cookie</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

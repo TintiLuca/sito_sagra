@@ -1,0 +1,439 @@
+/* ============================================
+   CITY FESTIVAL — Sponsors Page (sponsors.css)
+   ============================================ */
+
+/* ══════════════════════════════════
+   PAGE HERO
+══════════════════════════════════ */
+.sponsors-hero {
+  background: var(--dark);
+  padding: calc(72px + var(--space-2xl)) 0 var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.sponsors-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 60%, rgba(255,209,102,0.18) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255,87,51,0.15) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.sponsors-hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.sponsors-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.sponsors-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 1rem;
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  animation: fadeUp 0.5s ease both;
+}
+
+.sponsors-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.sponsors-hero h1 span { color: var(--yellow); }
+
+.sponsors-hero__sub {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+/* ══════════════════════════════════
+   SHARED TIER LAYOUT
+══════════════════════════════════ */
+.tier {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.tier__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.tier__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  margin-bottom: var(--space-md);
+}
+
+.tier__title {
+  font-family: var(--font-display);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.tier__desc {
+  font-size: 0.92rem;
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.65;
+}
+
+/* ══════════════════════════════════
+   TIER 1 — MAIN SPONSOR
+   Full-width hero card, dark bg
+══════════════════════════════════ */
+.tier--main {
+  background: var(--dark);
+  border-bottom: 3px solid rgba(255,209,102,0.2);
+}
+
+.tier--main .tier__badge {
+  color: var(--yellow);
+  background: rgba(255,209,102,0.1);
+  border-color: rgba(255,209,102,0.4);
+}
+
+.tier--main .tier__title  { color: var(--white); font-size: clamp(2rem, 4vw, 3rem); }
+.tier--main .tier__desc   { color: rgba(255,255,255,0.55); }
+
+/* Main sponsor card */
+.main-sponsor-card {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border: 2px solid rgba(255,209,102,0.25);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3xl) var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  box-shadow: 0 0 60px rgba(255,209,102,0.06), 0 16px 48px rgba(0,0,0,0.4);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.main-sponsor-card:hover {
+  border-color: rgba(255,209,102,0.5);
+  box-shadow: 0 0 80px rgba(255,209,102,0.1), 0 24px 64px rgba(0,0,0,0.5);
+  transform: translateY(-4px);
+}
+
+/* Gold shimmer ring on main card */
+.main-sponsor-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,209,102,0.3), transparent 40%, transparent 60%, rgba(255,209,102,0.2));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.main-sponsor-card__logo-wrap {
+  width: 260px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  padding: var(--space-lg);
+}
+
+.main-sponsor-card__logo-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Placeholder shown when no image yet */
+.sponsor-logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gray);
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.main-sponsor-card__info {
+  text-align: center;
+}
+
+.main-sponsor-card__name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--yellow);
+  margin-bottom: var(--space-sm);
+}
+
+.main-sponsor-card__desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto var(--space-lg);
+}
+
+.main-sponsor-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.6rem 1.5rem;
+  background: var(--yellow);
+  color: var(--dark);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 2px solid var(--dark);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+}
+
+.main-sponsor-card__link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ══════════════════════════════════
+   TIER 2 — GOLD SPONSORS
+   Cream bg, 3-col prominent cards
+══════════════════════════════════ */
+.tier--gold {
+  background: var(--cream);
+  border-bottom: 3px solid rgba(26,26,46,0.07);
+}
+
+.tier--gold .tier__badge {
+  color: #B8860B;
+  background: rgba(184,134,11,0.08);
+  border-color: rgba(184,134,11,0.35);
+}
+
+.tier--gold .tier__title  { color: var(--dark); font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+.tier--gold .tier__desc   { color: var(--gray); }
+
+/* Gold sponsor grid */
+.gold-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.gold-card {
+  background: var(--white);
+  border: 2.5px solid var(--dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  border-top: 5px solid var(--saffron);
+}
+
+.gold-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gold-card__logo-wrap {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-light);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(26,26,46,0.07);
+  padding: var(--space-md);
+  overflow: hidden;
+}
+
+.gold-card__logo-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gold-card__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--dark);
+  text-align: center;
+}
+
+.gold-card__url {
+  font-size: 0.75rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ══════════════════════════════════
+   TIER 3 — COMMUNITY SPONSORS
+   Dark bg, compact logo mosaic
+══════════════════════════════════ */
+.tier--community {
+  background: var(--dark-soft);
+}
+
+.tier--community .tier__badge {
+  color: var(--teal);
+  background: rgba(6,167,125,0.1);
+  border-color: rgba(6,167,125,0.35);
+}
+
+.tier--community .tier__title { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.tier--community .tier__desc  { color: rgba(255,255,255,0.45); }
+
+/* Community logo mosaic */
+.community-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.community-card {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  text-decoration: none;
+  overflow: hidden;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.community-card:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+}
+
+.community-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+
+.community-card:hover img {
+  opacity: 1;
+  filter: none;
+}
+
+.community-card .sponsor-logo-placeholder {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.8rem;
+}
+
+/* ══════════════════════════════════
+   BECOME A SPONSOR CTA
+══════════════════════════════════ */
+.sponsor-cta {
+  background: var(--coral);
+  border-top: 3px solid var(--dark);
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+.sponsor-cta__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sponsor-cta h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.sponsor-cta p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+.sponsor-cta .btn {
+  background: var(--white);
+  color: var(--coral);
+  border-color: var(--white);
+}
+
+.sponsor-cta .btn:hover {
+  background: var(--yellow);
+  border-color: var(--dark);
+  color: var(--dark);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 860px) {
+  .gold-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .gold-grid { grid-template-columns: 1fr; }
+  .main-sponsor-card { padding: var(--space-xl) var(--space-lg); }
+  .community-card { width: 130px; height: 70px; }
+}

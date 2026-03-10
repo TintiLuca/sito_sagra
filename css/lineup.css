@@ -1,0 +1,369 @@
+/* ============================================
+   CITY FESTIVAL — Lineup Page (lineup.css)
+   ============================================ */
+
+/* ══════════════════════════════════
+   PAGE HERO
+══════════════════════════════════ */
+.lineup-hero {
+  background: var(--dark);
+  padding: calc(72px + var(--space-2xl)) 0 var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.lineup-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 60%, rgba(255,87,51,0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(255,209,102,0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(6,167,125,0.12) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.lineup-hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.lineup-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lineup-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 1rem;
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  animation: fadeUp 0.5s ease both;
+}
+
+.lineup-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.lineup-hero h1 span { color: var(--yellow); }
+
+.lineup-hero__sub {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+/* ══════════════════════════════════
+   DAY TABS
+══════════════════════════════════ */
+.day-tabs {
+  background: var(--dark);
+  border-bottom: 3px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+}
+
+.day-tabs__inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.day-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md) var(--space-xl);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: background var(--transition), border-color var(--transition);
+  gap: 3px;
+  min-width: 110px;
+}
+
+.day-tab:hover { background: rgba(255,255,255,0.04); }
+
+.day-tab.active {
+  border-bottom-color: var(--yellow);
+  background: rgba(255,209,102,0.05);
+}
+
+.day-tab__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.45);
+  transition: color var(--transition);
+  letter-spacing: 0.03em;
+}
+
+.day-tab__date {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color var(--transition);
+}
+
+.day-tab.active .day-tab__name { color: var(--yellow); }
+.day-tab.active .day-tab__date { color: rgba(255,209,102,0.55); }
+
+/* ══════════════════════════════════
+   SCHEDULE AREA
+══════════════════════════════════ */
+.schedule {
+  background: var(--dark);
+  padding: var(--space-2xl) 0 var(--space-3xl);
+  min-height: 70vh;
+}
+
+.schedule__panel {
+  display: none;
+}
+
+.schedule__panel.active {
+  display: block;
+  animation: fadeUp 0.35s ease both;
+}
+
+/* ══════════════════════════════════
+   DISH OF THE DAY — standalone block
+══════════════════════════════════ */
+.dish-of-day {
+  background: linear-gradient(135deg, var(--saffron) 0%, var(--orange) 100%);
+  border: 3px solid var(--dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* big decorative fork/knife watermark */
+.dish-of-day::after {
+  content: '🍽️';
+  position: absolute;
+  right: var(--space-2xl);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 7rem;
+  opacity: 0.15;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.dish-of-day__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(26,26,46,0.12);
+  border: 1.5px solid rgba(26,26,46,0.15);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(26,26,46,0.65);
+  margin-bottom: var(--space-md);
+}
+
+.dish-of-day__name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--dark);
+  line-height: 1.05;
+  margin-bottom: var(--space-sm);
+}
+
+.dish-of-day__desc {
+  font-size: 1rem;
+  color: rgba(26,26,46,0.72);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: var(--space-lg);
+}
+
+.dish-of-day__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.dish-of-day__chef {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(26,26,46,0.65);
+}
+
+.dish-of-day__tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.dish-of-day__tags .tag {
+  border-color: rgba(26,26,46,0.2);
+  font-size: 0.7rem;
+}
+
+/* ══════════════════════════════════
+   ARTIST CARD — big and prominent
+══════════════════════════════════ */
+.artist-card-full {
+  background: rgba(255,255,255,0.04);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 320px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.artist-card-full:hover {
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.45);
+}
+
+/* Left: big photo / emoji area */
+.artist-card-full__photo {
+  background: var(--dark-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-card-full__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, rgba(26,26,46,0.6) 100%);
+}
+
+.artist-card-full__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right: info */
+.artist-card-full__body {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.artist-card-full__time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.artist-card-full__time-value {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--yellow);
+  line-height: 1;
+}
+
+.artist-card-full__time-end {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.artist-card-full__name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--white);
+  line-height: 1;
+}
+
+.artist-card-full__genre {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.artist-card-full__bio {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.artist-card-full__meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 860px) {
+  .artist-card-full {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .artist-card-full__photo {
+    height: 220px;
+    font-size: 6rem;
+  }
+
+  .artist-card-full__photo::after {
+    background: linear-gradient(to bottom, transparent 50%, rgba(26,26,46,0.6) 100%);
+  }
+
+  .artist-card-full__body {
+    padding: var(--space-xl);
+  }
+
+  .dish-of-day::after { display: none; }
+}
+
+@media (max-width: 600px) {
+  .day-tab { min-width: 80px; padding: var(--space-md); }
+  .day-tab__name { font-size: 0.9rem; }
+
+  .dish-of-day { padding: var(--space-lg); }
+  .artist-card-full__body { padding: var(--space-lg); }
+  .artist-card-full__name { font-size: 1.8rem; }
+}

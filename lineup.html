@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lineup — CityFest</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/lineup.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+        <span class="navbar__logo-name">🎶 CityFest</span>
+        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html" class="active">Lineup</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn-secondary">Find Us</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="lineup.html" role="menuitem">Lineup</a>
+      <a href="menu.html" role="menuitem">Menu</a>
+      <a href="gallery.html" role="menuitem">Gallery</a>
+      <a href="sponsors.html" role="menuitem">Sponsors</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="lineup-hero" aria-label="Lineup hero">
+    <div class="lineup-hero__dots"></div>
+    <div class="container lineup-hero__inner">
+      <div class="lineup-hero__eyebrow">
+        <span>🎶</span> CityFest 2025
+      </div>
+      <h1>The <span>Lineup</span></h1>
+      <p class="lineup-hero__sub">One artist, one dish, one unforgettable night — four days of pure magic.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       DAY TABS
+  ══════════════════════════════════ -->
+  <div class="day-tabs" role="tablist" aria-label="Festival days">
+    <div class="day-tabs__inner">
+
+      <button class="day-tab active" role="tab" data-day="1"
+        aria-selected="true" aria-controls="day-1" tabindex="0">
+        <span class="day-tab__name">Thursday</span>
+        <span class="day-tab__date">[DAY 1 DATE]</span>
+      </button>
+
+      <button class="day-tab" role="tab" data-day="2"
+        aria-selected="false" aria-controls="day-2" tabindex="-1">
+        <span class="day-tab__name">Friday</span>
+        <span class="day-tab__date">[DAY 2 DATE]</span>
+      </button>
+
+      <button class="day-tab" role="tab" data-day="3"
+        aria-selected="false" aria-controls="day-3" tabindex="-1">
+        <span class="day-tab__name">Saturday</span>
+        <span class="day-tab__date">[DAY 3 DATE]</span>
+      </button>
+
+      <button class="day-tab" role="tab" data-day="4"
+        aria-selected="false" aria-controls="day-4" tabindex="-1">
+        <span class="day-tab__name">Sunday</span>
+        <span class="day-tab__date">[DAY 4 DATE]</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SCHEDULE
+  ══════════════════════════════════ -->
+  <section class="schedule" aria-label="Daily schedule">
+    <div class="container">
+
+      <!-- ════════════════ DAY 1 · THURSDAY ════════════════ -->
+      <div id="day-1" class="schedule__panel active" role="tabpanel" aria-labelledby="tab-1">
+
+        <!-- DISH OF THE DAY -->
+        <div class="dish-of-day" aria-label="Dish of the day">
+          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
+          <p class="dish-of-day__name">Example Smoked Pulled Pork Slider</p>
+          <p class="dish-of-day__desc">
+            Example description — slow-cooked for 12 hours, served on a toasted brioche bun with house-made slaw and smoky barbecue sauce. The perfect way to kick off the festival.
+          </p>
+          <div class="dish-of-day__footer">
+            <span class="dish-of-day__chef">👨‍🍳 by Chef Marco Rossi</span>
+            <div class="dish-of-day__tags">
+              <span class="tag tag-spicy">🌶️ Spicy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARTIST CARD -->
+        <article class="artist-card-full" aria-label="The Groove Collective">
+          <div class="artist-card-full__photo">🎸</div>
+          <div class="artist-card-full__body">
+            <div class="artist-card-full__time">
+              <span class="artist-card-full__time-value">21:00</span>
+              <span class="artist-card-full__time-end">→ 23:00</span>
+            </div>
+            <h2 class="artist-card-full__name">The Groove Collective</h2>
+            <p class="artist-card-full__genre">Funk · Soul · Live Band</p>
+            <p class="artist-card-full__bio">
+              A seven-piece powerhouse bringing high-energy funk and deep soul to the main stage. Expect non-stop dancing, brass horns, and grooves you won't shake for days.
+            </p>
+            <div class="artist-card-full__meta">
+              <span class="tag tag-music">🎵 Music</span>
+              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- END DAY 1 -->
+
+      <!-- ════════════════ DAY 2 · FRIDAY ════════════════ -->
+      <div id="day-2" class="schedule__panel" role="tabpanel" aria-labelledby="tab-2" hidden>
+
+        <!-- DISH OF THE DAY -->
+        <div class="dish-of-day" aria-label="Dish of the day">
+          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
+          <p class="dish-of-day__name">Example Ceviche Tostada</p>
+          <p class="dish-of-day__desc">
+            Example description — fresh tiger prawn ceviche on a crispy corn tostada, with avocado, pickled red onion and a hint of lime. Bright, zesty, and impossible to put down.
+          </p>
+          <div class="dish-of-day__footer">
+            <span class="dish-of-day__chef">👨‍🍳 by Chef Lucia Fernández</span>
+            <div class="dish-of-day__tags">
+              <span class="tag tag-gluten">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARTIST CARD -->
+        <article class="artist-card-full" aria-label="Elena Vasquez">
+          <div class="artist-card-full__photo">🎷</div>
+          <div class="artist-card-full__body">
+            <div class="artist-card-full__time">
+              <span class="artist-card-full__time-value">21:00</span>
+              <span class="artist-card-full__time-end">→ 23:00</span>
+            </div>
+            <h2 class="artist-card-full__name">Elena Vasquez</h2>
+            <p class="artist-card-full__genre">Jazz · Latin · Bossa Nova</p>
+            <p class="artist-card-full__bio">
+              Elena's sultry saxophone weaves between jazz, bossa nova and Latin rhythms in a way that feels both intimate and cinematic. A performance not to be missed under the open sky.
+            </p>
+            <div class="artist-card-full__meta">
+              <span class="tag tag-music">🎵 Music</span>
+              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- END DAY 2 -->
+
+      <!-- ════════════════ DAY 3 · SATURDAY ════════════════ -->
+      <div id="day-3" class="schedule__panel" role="tabpanel" aria-labelledby="tab-3" hidden>
+
+        <!-- DISH OF THE DAY -->
+        <div class="dish-of-day" aria-label="Dish of the day">
+          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
+          <p class="dish-of-day__name">Example Birria Tacos</p>
+          <p class="dish-of-day__desc">
+            Example description — braised beef birria tacos with melted cheese, rich consommé dipping broth, diced onion and fresh cilantro. A festival favourite, served hot all evening long.
+          </p>
+          <div class="dish-of-day__footer">
+            <span class="dish-of-day__chef">👨‍🍳 by Chef Carlos Mendez</span>
+            <div class="dish-of-day__tags">
+              <span class="tag tag-spicy">🌶️ Spicy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARTIST CARD -->
+        <article class="artist-card-full" aria-label="Drumline Riot">
+          <div class="artist-card-full__photo">🥁</div>
+          <div class="artist-card-full__body">
+            <div class="artist-card-full__time">
+              <span class="artist-card-full__time-value">21:00</span>
+              <span class="artist-card-full__time-end">→ 23:00</span>
+            </div>
+            <h2 class="artist-card-full__name">Drumline Riot</h2>
+            <p class="artist-card-full__genre">Percussion · World · Afrobeat</p>
+            <p class="artist-card-full__bio">
+              Twenty drummers, one unstoppable energy. Drumline Riot fuses West African rhythms with contemporary percussion into a full-body sonic experience that shakes the ground beneath you.
+            </p>
+            <div class="artist-card-full__meta">
+              <span class="tag tag-music">🎵 Music</span>
+              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- END DAY 3 -->
+
+      <!-- ════════════════ DAY 4 · SUNDAY ════════════════ -->
+      <div id="day-4" class="schedule__panel" role="tabpanel" aria-labelledby="tab-4" hidden>
+
+        <!-- DISH OF THE DAY -->
+        <div class="dish-of-day" aria-label="Dish of the day">
+          <div class="dish-of-day__eyebrow">🍽️ Dish of the day · Closing Night</div>
+          <p class="dish-of-day__name">Example Midnight Chocolate Fondue</p>
+          <p class="dish-of-day__desc">
+            Example description — dark Belgian chocolate fondue served with fresh fruit, toasted marshmallows and salted caramel biscuits. The sweetest possible way to close four incredible days.
+          </p>
+          <div class="dish-of-day__footer">
+            <span class="dish-of-day__chef">👨‍🍳 by Chef Sophie Laurent</span>
+            <div class="dish-of-day__tags">
+              <span class="tag tag-vegan">🌿 Vegetarian</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARTIST CARD -->
+        <article class="artist-card-full" aria-label="The Neon Wolves">
+          <div class="artist-card-full__photo">🎤</div>
+          <div class="artist-card-full__body">
+            <div class="artist-card-full__time">
+              <span class="artist-card-full__time-value">21:00</span>
+              <span class="artist-card-full__time-end">→ 23:00</span>
+            </div>
+            <h2 class="artist-card-full__name">The Neon Wolves</h2>
+            <p class="artist-card-full__genre">Indie Rock · Alternative · Closing Set</p>
+            <p class="artist-card-full__bio">
+              Closing the festival with a bang, The Neon Wolves deliver an anthemic set of indie rock and electric alternative. Four days end here — and they'll make sure you never forget it.
+            </p>
+            <div class="artist-card-full__meta">
+              <span class="tag tag-music">🎵 Music</span>
+              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- END DAY 4 -->
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">🎶 CityFest</div>
+          <p class="footer__brand-desc">Four days of food, music, and good vibes in the heart of the city. Free entry, open to everyone.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Explore</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineup.html">Lineup</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__contact-item"><span>📍</span><span>Piazza Grande, City Centre</span></div>
+          <div class="footer__contact-item"><span>📅</span><span>[START DATE] – [END DATE]</span></div>
+          <div class="footer__contact-item"><span>✉️</span><span>hello@cityfest.com</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 CityFest. All rights reserved.</p>
+        <nav class="footer__bottom-links" aria-label="Legal links">
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/lineup.js"></script>
+</body>
+</html>

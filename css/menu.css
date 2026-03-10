@@ -1,0 +1,330 @@
+/* ============================================
+   CITY FESTIVAL — Menu Page (menu.css)
+   ============================================ */
+
+/* ══════════════════════════════════
+   PAGE HERO
+══════════════════════════════════ */
+.menu-hero {
+  background: var(--dark);
+  padding: calc(72px + var(--space-2xl)) 0 var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.menu-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(244,166,35,0.2) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255,87,51,0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(6,167,125,0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.menu-hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.menu-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 1rem;
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  animation: fadeUp 0.5s ease both;
+}
+
+.menu-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.menu-hero h1 span { color: var(--yellow); }
+
+.menu-hero__sub {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+/* ══════════════════════════════════
+   SECTION NAV (anchor links)
+══════════════════════════════════ */
+.menu-nav {
+  background: var(--cream);
+  border-bottom: 3px solid var(--dark);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+}
+
+.menu-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.menu-nav__inner::-webkit-scrollbar { display: none; }
+
+.menu-nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0.03em;
+}
+
+.menu-nav__link span:first-child { font-size: 1.3rem; }
+
+.menu-nav__link:hover {
+  color: var(--dark);
+  border-bottom-color: var(--coral);
+}
+
+.menu-nav__link.active {
+  color: var(--dark);
+  border-bottom-color: var(--coral);
+}
+
+/* ══════════════════════════════════
+   MENU PAGE BODY
+══════════════════════════════════ */
+.menu-body {
+  background: var(--cream);
+  padding-bottom: var(--space-3xl);
+}
+
+/* ══════════════════════════════════
+   MENU SECTION
+══════════════════════════════════ */
+.menu-section {
+  padding: var(--space-3xl) 0 0;
+}
+
+.menu-section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.menu-section__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  border: 2.5px solid var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-section__title-wrap {}
+
+.menu-section__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--dark);
+  line-height: 1;
+}
+
+.menu-section__subtitle {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+/* Divider line */
+.menu-divider {
+  border: none;
+  border-top: 2.5px solid var(--dark);
+  margin-bottom: var(--space-xl);
+  opacity: 0.12;
+}
+
+/* ══════════════════════════════════
+   MENU ITEMS GRID
+══════════════════════════════════ */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--white);
+  border: 2.5px solid var(--dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* Single item row */
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1.5px solid rgba(26,26,46,0.07);
+  transition: background var(--transition);
+}
+
+.menu-item:last-child { border-bottom: none; }
+
+.menu-item:hover { background: var(--cream); }
+
+/* Item with sub-options spans full width */
+.menu-item--group {
+  display: block;
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.menu-item__left {}
+
+.menu-item__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.menu-item__note {
+  font-size: 0.8rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.menu-item__desc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.menu-item__price {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--coral);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+/* Sub options (e.g. Maccheroncini variants) */
+.menu-item__options {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item__option {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 6px var(--space-md);
+  background: var(--gray-light);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(26,26,46,0.07);
+}
+
+.menu-item__option-name {
+  font-size: 0.88rem;
+  color: var(--dark-soft);
+}
+
+.menu-item__option-price {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--coral);
+  white-space: nowrap;
+}
+
+/* Group header row (name + base price) */
+.menu-item__group-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+/* Tags on items */
+.menu-item__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.menu-item__tags .tag {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+}
+
+/* Section color accents */
+.menu-section--primi   .menu-section__icon { background: #FFF3CC; }
+.menu-section--secondi .menu-section__icon { background: #FFE8D6; }
+.menu-section--snack   .menu-section__icon { background: #D6F5E3; }
+.menu-section--dolci   .menu-section__icon { background: #F5D6FF; }
+.menu-section--bevande .menu-section__icon { background: #D6ECFF; }
+
+.menu-section--primi   .menu-section__title { color: #B8860B; }
+.menu-section--secondi .menu-section__title { color: var(--terracotta); }
+.menu-section--snack   .menu-section__title { color: var(--teal-dark); }
+.menu-section--dolci   .menu-section__title { color: #7B2D8B; }
+.menu-section--bevande .menu-section__title { color: #1565C0; }
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 640px) {
+  .menu-nav__link { padding: var(--space-md) var(--space-md); font-size: 0.75rem; }
+  .menu-item { padding: var(--space-md); }
+  .menu-item--group { padding: var(--space-md); }
+  .menu-section__header { gap: var(--space-md); }
+  .menu-section__icon { width: 52px; height: 52px; font-size: 1.4rem; }
+}

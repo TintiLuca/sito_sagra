@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Festival — Component Preview</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <style>
+    /* Preview-only spacing */
+    .preview-section {
+      padding: var(--space-2xl) 0;
+    }
+    .preview-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray);
+      margin-bottom: var(--space-md);
+    }
+    .preview-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .preview-bg-dark {
+      background: var(--dark);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+    }
+    .color-swatch {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-md);
+      border: 2.5px solid var(--dark);
+      box-shadow: var(--shadow-sm);
+    }
+    .swatch-label {
+      font-size: 0.7rem;
+      text-align: center;
+      margin-top: 4px;
+      color: var(--gray);
+    }
+    .swatch-wrap { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+
+      <a href="index.html" class="navbar__logo" aria-label="City Festival home">
+        <span class="navbar__logo-name">🎶 CityFest</span>
+        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+      </a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html" class="active">Lineup</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="navbar__cta">
+        <a href="#tickets" class="btn btn-primary">Get Tickets</a>
+      </div>
+
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="lineup.html" role="menuitem">Lineup</a>
+      <a href="menu.html" role="menuitem">Menu</a>
+      <a href="gallery.html" role="menuitem">Gallery</a>
+      <a href="sponsors.html" role="menuitem">Sponsors</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+      <a href="#tickets" class="btn btn-primary" role="menuitem">Get Tickets</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       PAGE HERO (inner page style)
+  ══════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Component Preview</h1>
+      <p>Shared design elements for the City Festival website</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       COMPONENT PREVIEW AREA
+  ══════════════════════════════════ -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Typography -->
+      <div class="preview-section">
+        <p class="preview-label">Typography</p>
+        <h1>Festival Heading 1</h1>
+        <h2>Schedule & Lineup</h2>
+        <h3>Artist Name Here</h3>
+        <h4>Stage — 8:00 PM</h4>
+        <p style="margin-top: var(--space-md);">Body text example. Come join us for a weekend of incredible food, music, and good vibes. Discover your next favourite artist or dish!</p>
+      </div>
+
+      <!-- Colors -->
+      <div class="preview-section">
+        <p class="preview-label">Color Palette</p>
+        <div class="preview-row">
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--coral)"></div><span class="swatch-label">Coral</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--orange)"></div><span class="swatch-label">Orange</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--yellow)"></div><span class="swatch-label">Yellow</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--teal)"></div><span class="swatch-label">Teal</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--saffron)"></div><span class="swatch-label">Saffron</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--terracotta)"></div><span class="swatch-label">Terracotta</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--dark)"></div><span class="swatch-label">Dark</span></div>
+          <div class="swatch-wrap"><div class="color-swatch" style="background:var(--cream)"></div><span class="swatch-label">Cream</span></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="preview-section">
+        <p class="preview-label">Buttons</p>
+        <div class="preview-row">
+          <a href="#" class="btn btn-primary">Get Tickets</a>
+          <a href="#" class="btn btn-secondary">Explore Menu</a>
+          <a href="#" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="preview-section">
+        <p class="preview-label">Tags & Badges</p>
+        <div class="preview-row">
+          <span class="tag tag-music">🎵 Music</span>
+          <span class="tag tag-food">🍽️ Food</span>
+          <span class="tag tag-vegan">🌿 Vegan</span>
+          <span class="tag tag-gluten">🌾 Gluten-Free</span>
+          <span class="tag tag-spicy">🌶️ Spicy</span>
+        </div>
+      </div>
+
+      <!-- Section header -->
+      <div class="preview-section">
+        <p class="preview-label">Section Header</p>
+        <div class="section-header">
+          <div class="squiggle"></div>
+          <h2>Tonight's Lineup</h2>
+          <p>Three days of music, flavours, and unforgettable moments in the heart of the city.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__brand-name">🎶 CityFest</div>
+          <p class="footer__brand-desc">Three days of food, music, and good vibes in the heart of the city. Join us for an unforgettable summer celebration.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter / X">🐦</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer__col">
+          <p class="footer__col-title">Explore</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineup.html">Lineup</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+
+        <!-- Info -->
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer__col">
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__contact-item">
+            <span>📍</span>
+            <span>Piazza Grande, City Centre</span>
+          </div>
+          <div class="footer__contact-item">
+            <span>📅</span>
+            <span>July 18–20, 2025</span>
+          </div>
+          <div class="footer__contact-item">
+            <span>✉️</span>
+            <span>hello@cityfest.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p>© 2025 CityFest. All rights reserved.</p>
+        <nav class="footer__bottom-links" aria-label="Legal links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

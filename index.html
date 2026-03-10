@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityFest — Food & Music Festival</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+          <span class="navbar__logo-name">🎶 CityFest</span>
+          <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar__cta">
+          <a href="contact.html" class="btn btn-secondary">Find Us</a>
+        </div>
+        <button
+          class="navbar__hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="navbar__mobile" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="lineup.html" role="menuitem">Lineup</a>
+        <a href="menu.html" role="menuitem">Menu</a>
+        <a href="gallery.html" role="menuitem">Gallery</a>
+        <a href="sponsors.html" role="menuitem">Sponsors</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <div class="hero__dots"></div>
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__blob hero__blob--3"></div>
+      </div>
+
+      <div class="hero__inner">
+        <!-- Left: text -->
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span>🗓️</span>
+            <!-- DATE: replace with your festival dates e.g. "July 18 – 20, 2025" -->
+            From [START DATE] to [END DATE]
+          </div>
+          <h1 class="hero__title">
+            The City<br />
+            <span class="accent"
+              >Comes <span class="accent-coral">Alive</span></span
+            >
+          </h1>
+          <p class="hero__subtitle">
+            Three days of incredible music, bold flavours, and unforgettable
+            moments — right in the heart of the city. Free entry, good vibes
+            only.
+          </p>
+          <div class="hero__actions">
+            <a href="lineup.html" class="btn btn-primary">See the Lineup →</a>
+            <a href="menu.html" class="btn btn-outline btn-outline--light"
+              >Explore Menu</a
+            >
+          </div>
+          <div class="hero__info">
+            <div class="hero__pill">
+              <span>📍</span><span>Piazza Grande</span>
+            </div>
+            <div class="hero__pill">
+              <span>🎟️</span><span>Free Admission</span>
+            </div>
+            <div class="hero__pill"><span>🌤️</span><span>Outdoors</span></div>
+          </div>
+        </div>
+
+        <!-- Right: floating cards (decorative) -->
+        <div class="hero__cards" aria-hidden="true">
+          <div class="hero__card hero__card--main">
+            <span class="card-emoji">🎉</span>
+            <h3>CityFest 2025</h3>
+            <p>Food · Music · Community</p>
+          </div>
+          <div class="hero__card hero__card--artist">
+            <p class="mini-card-label">Tonight's headliner</p>
+            <p class="mini-card-value">The Groove Collective</p>
+            <p class="mini-card-sub">🎸 Funk · Soul · Live Band</p>
+          </div>
+          <div class="hero__card hero__card--food">
+            <p class="mini-card-label">Chef's special</p>
+            <p class="mini-card-value">🌮 Truffle Tacos</p>
+            <p class="mini-card-sub">by Chef Marco Rossi</p>
+          </div>
+          <div class="hero__card hero__card--date">
+            <p class="mini-card-label">Event status</p>
+            <p class="mini-card-value">
+              <span class="mini-card-dot"></span>Coming Soon
+            </p>
+            <p class="mini-card-sub">Piazza Grande</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       DATE STRIP
+       Replace [DAY START], [MONTH START], [DAY END], [MONTH END], [YEAR]
+  ══════════════════════════════════ -->
+    <div class="date-strip" aria-label="Festival dates">
+      <div class="date-strip__inner">
+        <p class="date-strip__label">📅 Festival dates</p>
+        <div class="date-strip__range">
+          <div class="date-strip__date">
+            <span class="date-strip__day">[DAY START]</span>
+            <span class="date-strip__month">[MONTH START] [YEAR]</span>
+          </div>
+          <span class="date-strip__arrow">→</span>
+          <div class="date-strip__date">
+            <span class="date-strip__day">[DAY END]</span>
+            <span class="date-strip__month">[MONTH END] [YEAR]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+       HIGHLIGHTS
+  ══════════════════════════════════ -->
+    <section class="highlights section" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="squiggle"></div>
+          <h2 id="highlights-title">What to Expect</h2>
+          <p>
+            A weekend that feeds your ears and your stomach in equal measure.
+          </p>
+        </div>
+        <div class="highlights__grid">
+          <div class="highlight-card highlight-card--coral" data-animate>
+            <span class="highlight-card__icon">🎵</span>
+            <h3>Live Music</h3>
+            <p>
+              From jazz to funk, indie to world music — three stages running
+              across all three days with over 30 artists performing live.
+            </p>
+          </div>
+          <div class="highlight-card highlight-card--teal" data-animate>
+            <span class="highlight-card__icon">🍽️</span>
+            <h3>Food Village</h3>
+            <p>
+              Twenty+ local vendors and guest chefs bringing the best street
+              food, signature dishes, and daring flavour combinations from
+              across the region.
+            </p>
+          </div>
+          <div class="highlight-card highlight-card--yellow" data-animate>
+            <span class="highlight-card__icon">🌟</span>
+            <h3>Free for All</h3>
+            <p>
+              No tickets, no barriers. CityFest is a free event open to everyone
+              — come for an hour or stay for the whole weekend.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       ARTISTS TEASER
+  ══════════════════════════════════ -->
+    <section class="artists-teaser" aria-labelledby="artists-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="squiggle"></div>
+          <h2 id="artists-title">Featured Artists</h2>
+          <p>Just a taste of who's taking the stage this year.</p>
+        </div>
+        <div class="artists-teaser__grid">
+          <div class="artist-card" data-animate>
+            <div class="artist-card__img">🎸</div>
+            <div class="artist-card__body">
+              <p class="artist-card__name">The Groove Collective</p>
+              <p class="artist-card__genre">Funk · Soul · Live Band</p>
+              <span class="tag tag-music">🎵 Music</span>
+            </div>
+          </div>
+          <div class="artist-card" data-animate>
+            <div class="artist-card__img">🎷</div>
+            <div class="artist-card__body">
+              <p class="artist-card__name">Elena Vasquez</p>
+              <p class="artist-card__genre">Jazz · Latin</p>
+              <span class="tag tag-music">🎵 Music</span>
+            </div>
+          </div>
+          <div class="artist-card" data-animate>
+            <div class="artist-card__img">👨‍🍳</div>
+            <div class="artist-card__body">
+              <p class="artist-card__name">Chef Marco Rossi</p>
+              <p class="artist-card__genre">Italian Street Food</p>
+              <span class="tag tag-food">🍽️ Food</span>
+            </div>
+          </div>
+          <div class="artist-card" data-animate>
+            <div class="artist-card__img">🥁</div>
+            <div class="artist-card__body">
+              <p class="artist-card__name">Drumline Riot</p>
+              <p class="artist-card__genre">Percussion · World</p>
+              <span class="tag tag-music">🎵 Music</span>
+            </div>
+          </div>
+        </div>
+        <div class="artists-teaser__cta">
+          <a href="lineup.html" class="btn btn-secondary">Full Lineup →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       FOOD TEASER
+  ══════════════════════════════════ -->
+    <section class="food-teaser" aria-labelledby="food-title">
+      <div class="container">
+        <div class="food-teaser__inner">
+          <div class="food-teaser__content">
+            <div class="squiggle"></div>
+            <h2 id="food-title">A Feast for Every Taste</h2>
+            <p>
+              Our food village brings together the city's boldest chefs and most
+              beloved street vendors. Every dish tells a story — and some come
+              paired with a live performance.
+            </p>
+            <a href="menu.html" class="btn btn-primary">Browse the Menu →</a>
+          </div>
+          <div class="food-teaser__dishes">
+            <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🌮</span>
+              <p class="dish-mini__name">Truffle Tacos</p>
+              <p class="dish-mini__vendor">Chef Marco Rossi</p>
+            </div>
+            <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🍜</span>
+              <p class="dish-mini__name">Spicy Ramen</p>
+              <p class="dish-mini__vendor">Noodle District</p>
+            </div>
+            <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🧆</span>
+              <p class="dish-mini__name">Falafel Wrap</p>
+              <p class="dish-mini__vendor">Casa Levante</p>
+            </div>
+            <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🍦</span>
+              <p class="dish-mini__name">Gelato Bar</p>
+              <p class="dish-mini__vendor">La Cremeria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       GALLERY STRIP
+  ══════════════════════════════════ -->
+    <section class="gallery-strip" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="squiggle"></div>
+          <h2 id="gallery-title">Last Year's Vibes</h2>
+          <p>
+            A few snapshots from CityFest 2024 — the memories that keep us
+            coming back.
+          </p>
+        </div>
+      </div>
+      <div
+        class="gallery-strip__track"
+        role="list"
+        aria-label="Photo gallery preview"
+      >
+        <!-- Replace emoji placeholders with actual <img> tags when photos are ready -->
+        <div class="gallery-thumb" style="background: #ffe8d6" role="listitem">
+          🎸
+        </div>
+        <div class="gallery-thumb" style="background: #d6f5e3" role="listitem">
+          🌮
+        </div>
+        <div class="gallery-thumb" style="background: #fff3cc" role="listitem">
+          🎷
+        </div>
+        <div class="gallery-thumb" style="background: #ffd6d6" role="listitem">
+          👨‍🍳
+        </div>
+        <div class="gallery-thumb" style="background: #d6ecff" role="listitem">
+          🥁
+        </div>
+        <div class="gallery-thumb" style="background: #f5d6ff" role="listitem">
+          🎤
+        </div>
+        <div class="gallery-thumb" style="background: #ffedd6" role="listitem">
+          🍜
+        </div>
+      </div>
+      <div class="gallery-strip__cta">
+        <a href="gallery.html" class="btn btn-outline">Full Gallery →</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       INFO BAND
+  ══════════════════════════════════ -->
+    <section class="info-band" aria-label="Event details">
+      <div class="container">
+        <div class="info-band__grid">
+          <div class="info-band__item">
+            <span class="info-band__icon">📅</span>
+            <p class="info-band__label">When</p>
+            <!-- DATE: replace with festival dates -->
+            <p class="info-band__value">[DAY START]–[DAY END] [MONTH]</p>
+            <p class="info-band__sub">
+              [WEEKDAY START] to [WEEKDAY END] · [YEAR]
+            </p>
+          </div>
+          <div class="info-band__item">
+            <span class="info-band__icon">📍</span>
+            <p class="info-band__label">Where</p>
+            <p class="info-band__value">Piazza Grande</p>
+            <p class="info-band__sub">City Centre · Free Outdoor Event</p>
+          </div>
+          <div class="info-band__item">
+            <span class="info-band__icon">🕐</span>
+            <p class="info-band__label">Hours</p>
+            <p class="info-band__value">12:00 – 23:00</p>
+            <p class="info-band__sub">All three days · Rain or shine</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="footer__brand-name">🎶 CityFest</div>
+            <p class="footer__brand-desc">
+              Three days of food, music, and good vibes in the heart of the
+              city. Free entry, open to everyone.
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-link" aria-label="Instagram"
+                >📸</a
+              >
+              <a href="#" class="footer__social-link" aria-label="Facebook"
+                >👥</a
+              >
+              <a href="#" class="footer__social-link" aria-label="Twitter"
+                >🐦</a
+              >
+              <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Explore</p>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="lineup.html">Lineup</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="sponsors.html">Sponsors</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Info</p>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Press Kit</a></li>
+              <li><a href="#">Volunteer</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Contact</p>
+            <div class="footer__contact-item">
+              <span>📍</span><span>Piazza Grande, City Centre</span>
+            </div>
+            <!-- DATE: update with festival dates -->
+            <div class="footer__contact-item">
+              <span>📅</span><span>[START DATE] – [END DATE]</span>
+            </div>
+            <div class="footer__contact-item">
+              <span>✉️</span><span>hello@cityfest.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 CityFest. All rights reserved.</p>
+          <nav class="footer__bottom-links" aria-label="Legal links">
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

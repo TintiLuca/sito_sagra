@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menù — CityFest</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+        <span class="navbar__logo-name">🎶 CityFest</span>
+        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html">Lineup</a></li>
+        <li><a href="menu.html" class="active">Menù</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn-secondary">Find Us</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="lineup.html" role="menuitem">Lineup</a>
+      <a href="menu.html" role="menuitem">Menù</a>
+      <a href="gallery.html" role="menuitem">Gallery</a>
+      <a href="sponsors.html" role="menuitem">Sponsors</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="menu-hero" aria-label="Menu hero">
+    <div class="menu-hero__dots"></div>
+    <div class="container menu-hero__inner">
+      <div class="menu-hero__eyebrow">
+        <span>🍽️</span> CityFest 2025
+      </div>
+      <h1>Il <span>Menù</span></h1>
+      <p class="menu-hero__sub">Cucina del territorio, sapori autentici e qualche sorpresa — per tutti i gusti.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       STICKY SECTION NAV
+  ══════════════════════════════════ -->
+  <nav class="menu-nav" aria-label="Sezioni del menù">
+    <div class="menu-nav__inner">
+      <a href="#primi" class="menu-nav__link active">
+        <span>🍝</span> Primi
+      </a>
+      <a href="#secondi" class="menu-nav__link">
+        <span>🥩</span> Secondi
+      </a>
+      <a href="#snack" class="menu-nav__link">
+        <span>🌮</span> Snack &amp; Piatti Freddi
+      </a>
+      <a href="#dolci" class="menu-nav__link">
+        <span>🍰</span> Dolci &amp; Frutta
+      </a>
+      <a href="#bevande" class="menu-nav__link">
+        <span>🍺</span> Bevande &amp; Drink
+      </a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       MENU BODY
+  ══════════════════════════════════ -->
+  <main class="menu-body">
+    <div class="container">
+
+      <!-- ════════════════════════════
+           PRIMI PIATTI
+      ════════════════════════════ -->
+      <section id="primi" class="menu-section menu-section--primi" aria-labelledby="primi-title">
+        <div class="menu-section__header">
+          <div class="menu-section__icon">🍝</div>
+          <div class="menu-section__title-wrap">
+            <h2 class="menu-section__title" id="primi-title">Primi Piatti</h2>
+            <p class="menu-section__subtitle">Pasta fresca e risotti della tradizione</p>
+          </div>
+        </div>
+
+        <div class="menu-items" role="list">
+
+          <!-- Spatzle -->
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Spatzle panna e speck</p>
+              <p class="menu-item__note">Solo giovedì e domenica</p>
+            </div>
+            <span class="menu-item__price">€ 6,50</span>
+          </div>
+
+          <!-- Maccheroncini -->
+          <div class="menu-item--group" role="listitem">
+            <div class="menu-item__group-header">
+              <p class="menu-item__name">Maccheroncini</p>
+              <span class="menu-item__price">€ 6,50</span>
+            </div>
+            <div class="menu-item__options">
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Sugo d'anatra</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Sugo di lepre</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Pomodoro</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Panna e speck</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bigoli -->
+          <div class="menu-item--group" role="listitem">
+            <div class="menu-item__group-header">
+              <p class="menu-item__name">Bigoli</p>
+              <span class="menu-item__price">€ 6,50</span>
+            </div>
+            <div class="menu-item__options">
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Sugo d'anatra</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Sugo di lepre</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Pomodoro</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Panna e speck</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Risotto all'Amarone -->
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Risotto all'Amarone</p>
+              <p class="menu-item__note">Solo venerdì</p>
+            </div>
+            <span class="menu-item__price">€ 7,00</span>
+          </div>
+
+          <!-- Risotto al Tastasal -->
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Risotto al Tastasal</p>
+              <p class="menu-item__note">Solo sabato</p>
+            </div>
+            <span class="menu-item__price">€ 7,00</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           SECONDI PIATTI
+      ════════════════════════════ -->
+      <section id="secondi" class="menu-section menu-section--secondi" aria-labelledby="secondi-title">
+        <div class="menu-section__header">
+          <div class="menu-section__icon">🥩</div>
+          <div class="menu-section__title-wrap">
+            <h2 class="menu-section__title" id="secondi-title">Secondi Piatti</h2>
+            <p class="menu-section__subtitle">Grigliate, carni e piatti della tradizione veronese</p>
+          </div>
+        </div>
+
+        <div class="menu-items" role="list">
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Grigliata mista</p>
+              <p class="menu-item__desc">Polenta, pancetta, salamella, wurstel, pollo</p>
+            </div>
+            <span class="menu-item__price">€ 11,00</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Arrosticini "Macelleria Lugoboni"</p>
+              <p class="menu-item__desc">Con pane o polenta</p>
+            </div>
+            <span class="menu-item__price">€ 10,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Polenta e Salamella</p>
+            </div>
+            <span class="menu-item__price">€ 6,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Wurstel e Patate Fritte</p>
+            </div>
+            <span class="menu-item__price">€ 6,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Pollo alla griglia e Patate Fritte</p>
+            </div>
+            <span class="menu-item__price">€ 6,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Roastbeef con Verdure Grigliate</p>
+            </div>
+            <span class="menu-item__price">€ 9,00</span>
+          </div>
+
+          <!-- Veggy Burger -->
+          <div class="menu-item--group" role="listitem">
+            <div class="menu-item__group-header">
+              <div>
+                <p class="menu-item__name">Veggy Burger "Ortonuovo"</p>
+                <p class="menu-item__desc">Zucca o Spinaci</p>
+                <div class="menu-item__tags">
+                  <span class="tag tag-vegan">🌿 Vegetariano</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item__options">
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Con Patate Fritte</span>
+                <span class="menu-item__option-price">€ 6,50</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Con Verdure Grigliate</span>
+                <span class="menu-item__option-price">€ 7,50</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Piatto di Formaggi -->
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Piatto di Formaggi</p>
+              <p class="menu-item__desc">Monte Veronese, Grana Padano, Caciotta, Asiago, Pecorino Sardo — con Mostarda di frutta mista e Marmellata di Arance, pane o crostini</p>
+              <div class="menu-item__tags">
+                <span class="tag tag-vegan">🌿 Vegetariano</span>
+              </div>
+            </div>
+            <span class="menu-item__price">€ 7,00</span>
+          </div>
+
+          <!-- Insalatona -->
+          <div class="menu-item--group" role="listitem">
+            <div class="menu-item__group-header">
+              <div>
+                <p class="menu-item__name">Insalatona</p>
+              </div>
+              <span class="menu-item__price">€ 6,50</span>
+            </div>
+            <div class="menu-item__options">
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Sarda — Pecorino sardo, olive, pomodorini, insalata, cappuccio bianco e rosso, verdure grigliate, noci, pane o crostini</span>
+              </div>
+              <div class="menu-item__option">
+                <span class="menu-item__option-name">Trentina — Speck, funghi, pomodorini, insalata, cappuccio bianco e rosso, verdure grigliate, noci, pane o crostini</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           SNACK & PIATTI FREDDI
+      ════════════════════════════ -->
+      <section id="snack" class="menu-section menu-section--snack" aria-labelledby="snack-title">
+        <div class="menu-section__header">
+          <div class="menu-section__icon">🌮</div>
+          <div class="menu-section__title-wrap">
+            <h2 class="menu-section__title" id="snack-title">Snack &amp; Piatti Freddi</h2>
+            <p class="menu-section__subtitle">Sfizi veloci per tutto il giorno</p>
+          </div>
+        </div>
+
+        <div class="menu-items" role="list">
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Tostone</p>
+            </div>
+            <span class="menu-item__price">€ 4,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Hot Dog</p>
+            </div>
+            <span class="menu-item__price">€ 4,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Patate Fritte</p>
+            </div>
+            <span class="menu-item__price">€ 3,00</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Verdure Grigliate</p>
+              <div class="menu-item__tags">
+                <span class="tag tag-vegan">🌿 Vegetariano</span>
+              </div>
+            </div>
+            <span class="menu-item__price">€ 4,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Pane</p>
+            </div>
+            <span class="menu-item__price">€ 1,00</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           DOLCI & FRUTTA
+      ════════════════════════════ -->
+      <section id="dolci" class="menu-section menu-section--dolci" aria-labelledby="dolci-title">
+        <div class="menu-section__header">
+          <div class="menu-section__icon">🍰</div>
+          <div class="menu-section__title-wrap">
+            <h2 class="menu-section__title" id="dolci-title">Dolci &amp; Frutta</h2>
+            <p class="menu-section__subtitle">Il finale perfetto</p>
+          </div>
+        </div>
+
+        <div class="menu-items" role="list">
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Ghiacciolo</p>
+            </div>
+            <span class="menu-item__price">€ 0,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Frutta Mista</p>
+              <div class="menu-item__tags">
+                <span class="tag tag-vegan">🌿 Vegetariano</span>
+              </div>
+            </div>
+            <span class="menu-item__price">€ 3,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Dolci di "Come a Casa"</p>
+            </div>
+            <span class="menu-item__price">€ 3,50</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           BEVANDE & DRINK
+      ════════════════════════════ -->
+      <section id="bevande" class="menu-section menu-section--bevande" aria-labelledby="bevande-title">
+        <div class="menu-section__header">
+          <div class="menu-section__icon">🍺</div>
+          <div class="menu-section__title-wrap">
+            <h2 class="menu-section__title" id="bevande-title">Bevande &amp; Drink</h2>
+            <p class="menu-section__subtitle">Dalla mattina a notte fonda</p>
+          </div>
+        </div>
+
+        <div class="menu-items" role="list">
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Acqua naturale o gassata</p>
+              <p class="menu-item__desc">0,5L</p>
+            </div>
+            <span class="menu-item__price">€ 1,00</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Bibita</p>
+            </div>
+            <span class="menu-item__price">€ 2,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Birra</p>
+            </div>
+            <span class="menu-item__price">€ 3,50</span>
+          </div>
+
+          <div class="menu-item" role="listitem">
+            <div class="menu-item__left">
+              <p class="menu-item__name">Caffè</p>
+            </div>
+            <span class="menu-item__price">€ 1,00</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">🎶 CityFest</div>
+          <p class="footer__brand-desc">Quattro giorni di cibo, musica e buon umore nel cuore della città. Ingresso libero, per tutti.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Esplora</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineup.html">Lineup</a></li>
+            <li><a href="menu.html">Menù</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Accessibilità</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Volontari</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contatti</p>
+          <div class="footer__contact-item"><span>📍</span><span>Piazza Grande, Centro</span></div>
+          <div class="footer__contact-item"><span>📅</span><span>[DATA INIZIO] – [DATA FINE]</span></div>
+          <div class="footer__contact-item"><span>✉️</span><span>hello@cityfest.com</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 CityFest. Tutti i diritti riservati.</p>
+        <nav class="footer__bottom-links" aria-label="Link legali">
+          <a href="#">Privacy</a>
+          <a href="#">Cookie</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
