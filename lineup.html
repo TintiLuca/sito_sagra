@@ -1,322 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lineup — CityFest</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/lineup.css" />
-</head>
-<body>
-
-  <!-- ══════════════════════════════════
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programma — Antica Sagra di San Rocco</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/lineup.css" />
+    <link rel="stylesheet" href="css/privacy.css" />
+    <link rel="stylesheet" href="css/cookie_consent.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════
        NAVBAR
   ══════════════════════════════════ -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="CityFest home">
-        <span class="navbar__logo-name">🎶 CityFest</span>
-        <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
-      </a>
-      <ul class="navbar__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lineup.html" class="active">Lineup</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="navbar__cta">
-        <a href="contact.html" class="btn btn-secondary">Find Us</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="CityFest home">
+          <img
+            src="assets/logo.png"
+            alt="Antica Sagra di San Rocco"
+            height="50"
+          />
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lineup.html" class="active">Programma</a></li>
+          <li><a href="menu.html">Menù</a></li>
+          <li><a href="gallery.html">Galleria</a></li>
+          <li><a href="sponsors.html">Sponsor</a></li>
+          <li><a href="contact.html">Contatti</a></li>
+        </ul>
+        <div class="navbar__cta">
+          <a href="contact.html" class="btn btn-secondary">Dove Siamo</a>
+        </div>
+        <button
+          class="navbar__hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="navbar__mobile" role="menu">
-      <a href="index.html" role="menuitem">Home</a>
-      <a href="lineup.html" role="menuitem">Lineup</a>
-      <a href="menu.html" role="menuitem">Menu</a>
-      <a href="gallery.html" role="menuitem">Gallery</a>
-      <a href="sponsors.html" role="menuitem">Sponsors</a>
-      <a href="contact.html" role="menuitem">Contact</a>
-    </div>
-  </nav>
+      <div class="navbar__mobile" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="lineup.html" role="menuitem">Programma</a>
+        <a href="menu.html" role="menuitem">Menu</a>
+        <a href="gallery.html" role="menuitem">Gallery</a>
+        <a href="sponsors.html" role="menuitem">Sponsors</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+      </div>
+    </nav>
 
-  <!-- ══════════════════════════════════
+    <!-- ══════════════════════════════════
        HERO
   ══════════════════════════════════ -->
-  <section class="lineup-hero" aria-label="Lineup hero">
-    <div class="lineup-hero__dots"></div>
-    <div class="container lineup-hero__inner">
-      <div class="lineup-hero__eyebrow">
-        <span>🎶</span> CityFest 2025
+    <section class="lineup-hero" aria-label="Lineup hero">
+      <div class="lineup-hero__dots"></div>
+      <div class="container lineup-hero__inner">
+        <div class="lineup-hero__eyebrow">Antica Sagra di San Rocco</div>
+        <h1>Il <span>Programma</span></h1>
+        <p class="lineup-hero__sub">
+          Gli artisti. I piatti speciali. Le serate indimenticabili.<!--One artist, one dish, one unforgettable night — four days of pure
+          magic.-->
+        </p>
       </div>
-      <h1>The <span>Lineup</span></h1>
-      <p class="lineup-hero__sub">One artist, one dish, one unforgettable night — four days of pure magic.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════
+    <!-- ══════════════════════════════════
        DAY TABS
   ══════════════════════════════════ -->
-  <div class="day-tabs" role="tablist" aria-label="Festival days">
-    <div class="day-tabs__inner">
+    <div class="day-tabs" role="tablist" aria-label="Festival days">
+      <div class="day-tabs__inner">
+        <button
+          class="day-tab active"
+          role="tab"
+          aria-selected="true"
+          data-day="1"
+          aria-controls="day-1"
+          tabindex="0"
+        >
+          <span class="day-tab__name">Giovedì</span>
+          <span class="day-tab__date">30 Luglio</span>
+        </button>
 
-      <button class="day-tab active" role="tab" data-day="1"
-        aria-selected="true" aria-controls="day-1" tabindex="0">
-        <span class="day-tab__name">Thursday</span>
-        <span class="day-tab__date">[DAY 1 DATE]</span>
-      </button>
+        <button
+          class="day-tab"
+          role="tab"
+          data-day="2"
+          aria-selected="false"
+          aria-controls="day-2"
+          tabindex="-1"
+        >
+          <span class="day-tab__name">Venerdì</span>
+          <span class="day-tab__date">31 Luglio</span>
+        </button>
 
-      <button class="day-tab" role="tab" data-day="2"
-        aria-selected="false" aria-controls="day-2" tabindex="-1">
-        <span class="day-tab__name">Friday</span>
-        <span class="day-tab__date">[DAY 2 DATE]</span>
-      </button>
+        <button
+          class="day-tab"
+          role="tab"
+          data-day="3"
+          aria-selected="false"
+          aria-controls="day-3"
+          tabindex="-1"
+        >
+          <span class="day-tab__name">Sabato</span>
+          <span class="day-tab__date">1 Agosto</span>
+        </button>
 
-      <button class="day-tab" role="tab" data-day="3"
-        aria-selected="false" aria-controls="day-3" tabindex="-1">
-        <span class="day-tab__name">Saturday</span>
-        <span class="day-tab__date">[DAY 3 DATE]</span>
-      </button>
-
-      <button class="day-tab" role="tab" data-day="4"
-        aria-selected="false" aria-controls="day-4" tabindex="-1">
-        <span class="day-tab__name">Sunday</span>
-        <span class="day-tab__date">[DAY 4 DATE]</span>
-      </button>
-
+        <button
+          class="day-tab"
+          role="tab"
+          data-day="4"
+          aria-selected="false"
+          aria-controls="day-4"
+          tabindex="-1"
+        >
+          <span class="day-tab__name">Domenica</span>
+          <span class="day-tab__date">2 Agosto</span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <!-- ══════════════════════════════════
+    <!-- ══════════════════════════════════
        SCHEDULE
   ══════════════════════════════════ -->
-  <section class="schedule" aria-label="Daily schedule">
-    <div class="container">
+    <section class="schedule" aria-label="Daily schedule">
+      <div class="container">
+        <!-- ════════════════ DAY 1 · THURSDAY ════════════════ -->
+        <div
+          id="day-1"
+          class="schedule__panel active"
+          role="tabpanel"
+          aria-labelledby="tab-1"
+        >
+          <!-- ARTIST CARD -->
+          <article class="artist-card-full" aria-label="Cartoonici">
+            <div class="artist-card-full__photo">
+              <img class="cart" src="assets/band/cartoonici.jpg" alt="" />
+            </div>
+            <div class="artist-card-full__body">
+              <div class="artist-card-full__time">
+                <span class="artist-card-full__time-value">21:00</span>
+                <span class="artist-card-full__time-end">→ 23:00</span>
+              </div>
+              <h2 class="artist-card-full__name">Cartoonici</h2>
+              <p class="artist-card-full__genre">Rock · Sigle dei cartoni</p>
+              <p class="artist-card-full__bio">
+                Una band veronese propone uno spettacolo rock travolgente e
+                nostalgico dedicato alle sigle dei cartoni animati e degli
+                anime, dagli anni '80 a oggi. Un viaggio musicale ad alta
+                energia pensato per far ballare, cantare ed emozionare il
+                pubblico di tutte le generazioni.
+              </p>
+            </div>
+          </article>
 
-      <!-- ════════════════ DAY 1 · THURSDAY ════════════════ -->
-      <div id="day-1" class="schedule__panel active" role="tabpanel" aria-labelledby="tab-1">
-
-        <!-- DISH OF THE DAY -->
-        <div class="dish-of-day" aria-label="Dish of the day">
-          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
-          <p class="dish-of-day__name">Example Smoked Pulled Pork Slider</p>
-          <p class="dish-of-day__desc">
-            Example description — slow-cooked for 12 hours, served on a toasted brioche bun with house-made slaw and smoky barbecue sauce. The perfect way to kick off the festival.
-          </p>
-          <div class="dish-of-day__footer">
-            <span class="dish-of-day__chef">👨‍🍳 by Chef Marco Rossi</span>
-            <div class="dish-of-day__tags">
-              <span class="tag tag-spicy">🌶️ Spicy</span>
+          <!-- DISH OF THE DAY -->
+          <div
+            class="dish-of-day dish-of-day--with-img"
+            aria-label="Dish of the day"
+          >
+            <img
+              class="dish-of-day__img"
+              src="assets/img/risotto_quad.jpg"
+              alt="Piatto del giorno"
+            />
+            <div class="dish-of-day__eyebrow">🍽️ Piatto del giorno</div>
+            <p class="dish-of-day__name">Risotto al Tastasal</p>
+            <div class="dish-of-day__footer">
+              <div class="dish-of-day__tags">
+                <span class="tag tag-gluten">Senza glutine</span>
+              </div>
             </div>
           </div>
         </div>
+        <!-- END DAY 1 -->
 
-        <!-- ARTIST CARD -->
-        <article class="artist-card-full" aria-label="The Groove Collective">
-          <div class="artist-card-full__photo">🎸</div>
-          <div class="artist-card-full__body">
-            <div class="artist-card-full__time">
-              <span class="artist-card-full__time-value">21:00</span>
-              <span class="artist-card-full__time-end">→ 23:00</span>
+        <!-- ════════════════ DAY 2 · FRIDAY ════════════════ -->
+        <div
+          id="day-2"
+          class="schedule__panel"
+          role="tabpanel"
+          aria-labelledby="tab-2"
+          hidden
+        >
+          <!-- ARTIST CARD -->
+          <article class="artist-card-full" aria-label="The Waves">
+            <div class="artist-card-full__photo">
+              <img
+                class="wave"
+                src="assets/band/The Waves Logo white.png"
+                alt=""
+              />
             </div>
-            <h2 class="artist-card-full__name">The Groove Collective</h2>
-            <p class="artist-card-full__genre">Funk · Soul · Live Band</p>
-            <p class="artist-card-full__bio">
-              A seven-piece powerhouse bringing high-energy funk and deep soul to the main stage. Expect non-stop dancing, brass horns, and grooves you won't shake for days.
+            <div class="artist-card-full__body">
+              <div class="artist-card-full__time">
+                <span class="artist-card-full__time-value">21:00</span>
+                <span class="artist-card-full__time-end">→ 23:00</span>
+              </div>
+              <h2 class="artist-card-full__name">The Waves</h2>
+              <p class="artist-card-full__genre">Dance · Pop</p>
+              <p class="artist-card-full__bio">
+                I The Waves Duo prendono i più grandi tormentoni pop e dance
+                dagli anni 2000 a oggi e li trasformano in un'esplosione di
+                ritmo ed energia. Un sound fresco e travolgente, fatto per una
+                sola cosa: cantare a squarciagola e ballare dall'inizio alla
+                fine!
+              </p>
+            </div>
+          </article>
+
+          <!-- DISH OF THE DAY -->
+          <div
+            class="dish-of-day dish-of-day--with-img"
+            aria-label="Dish of the day"
+          >
+            <img
+              class="dish-of-day__img"
+              src="assets/img/risotto_quad.jpg"
+              alt="Piatto del giorno"
+            />
+            <div class="dish-of-day__eyebrow">🍽️ Piatto del giorno</div>
+            <p class="dish-of-day__name">Risotto al Tastasal</p>
+            <div class="dish-of-day__footer">
+              <div class="dish-of-day__tags">
+                <span class="tag tag-gluten">Senza glutine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END DAY 2 -->
+
+        <!-- ════════════════ DAY 3 · SATURDAY ════════════════ -->
+        <div
+          id="day-3"
+          class="schedule__panel"
+          role="tabpanel"
+          aria-labelledby="tab-3"
+          hidden
+        >
+          <!-- ARTIST CARD -->
+          <article class="artist-card-full" aria-label="Red Flaminga">
+            <div class="artist-card-full__photo">
+              <img class="red" src="assets/band/red_flaminga.png" alt="" />
+            </div>
+            <div class="artist-card-full__body">
+              <div class="artist-card-full__time">
+                <span class="artist-card-full__time-value">21:00</span>
+                <span class="artist-card-full__time-end">→ 23:00</span>
+              </div>
+              <h2 class="artist-card-full__name">Red Flaminga</h2>
+              <p class="artist-card-full__genre">Pop · Anni '80</p>
+              <p class="artist-card-full__bio">
+                I Red Flaminga sono una pop band travolgente che unisce massima
+                professionalità a una pura scarica di adrenalina live. Il loro
+                show è un viaggio dinamico e irresistibile attraverso la storia
+                del pop: dai grandi classici degli anni '80 fino alle hit
+                commerciali dei giorni nostri.
+              </p>
+            </div>
+          </article>
+
+          <!-- DISH OF THE DAY -->
+          <div
+            class="dish-of-day dish-of-day--with-img"
+            aria-label="Dish of the day"
+          >
+            <img
+              class="dish-of-day__img"
+              src="assets/img/risotto_quad.jpg"
+              alt="Piatto del giorno"
+            />
+            <div class="dish-of-day__eyebrow">🍽️ Piatto del giorno</div>
+            <p class="dish-of-day__name">Risotto al Tastasal</p>
+            <div class="dish-of-day__footer">
+              <div class="dish-of-day__tags">
+                <span class="tag tag-gluten">Senza glutine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END DAY 3 -->
+
+        <!-- ════════════════ DAY 4 · SUNDAY ════════════════ -->
+        <div
+          id="day-4"
+          class="schedule__panel"
+          role="tabpanel"
+          aria-labelledby="tab-4"
+          hidden
+        >
+          <!-- ARTIST CARD -->
+          <article class="artist-card-full" aria-label="The Venanzio Brothers">
+            <div class="artist-card-full__photo">
+              <img class="ven" src="assets/band/venanzio.jpg" alt="" />
+            </div>
+            <div class="artist-card-full__body">
+              <div class="artist-card-full__time">
+                <span class="artist-card-full__time-value">21:00</span>
+                <span class="artist-card-full__time-end">→ 23:00</span>
+              </div>
+              <h2 class="artist-card-full__name">The Venanzio Brothers</h2>
+              <p class="artist-card-full__genre">Country Rock · Pop · Dance</p>
+              <p class="artist-card-full__bio">
+                I Venanzio Brothers stravolgono i più grandi successi pop, rock
+                e dance di ieri e di oggi, riarrangiandoli in un ritmo
+                country-rock d'assalto. Uno show visivo e musicale ad altissimo
+                voltaggio, nato con un unico obiettivo: scatenare il pubblico!
+              </p>
+            </div>
+          </article>
+          <!-- DISH OF THE DAY -->
+          <div
+            class="dish-of-day dish-of-day--with-img"
+            aria-label="Dish of the day"
+          >
+            <img
+              class="dish-of-day__img"
+              src="assets/img/risotto_quad.jpg"
+              alt="Piatto del giorno"
+            />
+            <div class="dish-of-day__eyebrow">🍽️ Piatto del giorno</div>
+            <p class="dish-of-day__name">Risotto al Tastasal</p>
+            <div class="dish-of-day__footer">
+              <div class="dish-of-day__tags">
+                <span class="tag tag-gluten">Senza glutine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END DAY 4 -->
+      </div>
+    </section>
+
+    <!--
+  ════════════════════════════════════════════════════
+  FOOTER — copy this block into every page
+  Replace the "active" class on the correct nav link
+  ════════════════════════════════════════════════════
+-->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <!-- Brand -->
+          <div class="footer__brand">
+            <div class="footer__brand-name">
+              <img
+                src="assets/logo.png"
+                alt="Antica Sagra di San Rocco"
+                height="100"
+              />
+            </div>
+            <p class="footer__brand-desc">
+              Quattro giorni di cibo, musica e buon umore nel cuore del paese.
+              Ingresso libero, per tutti.
             </p>
-            <div class="artist-card-full__meta">
-              <span class="tag tag-music">🎵 Music</span>
-              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
+            <div class="footer__socials">
+              <!-- SOCIAL: replace href with real URLs -->
+              <a
+                href="https://www.instagram.com/sagra_sanrocco_pedemonte/#"
+                class="footer__social-link"
+                aria-label="Instagram"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-instagram-icon lucide-instagram"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/AnticaSagraSanRocco?locale=it_IT"
+                class="footer__social-link"
+                aria-label="Facebook"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-facebook-icon lucide-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  /></svg
+              ></a>
             </div>
           </div>
-        </article>
 
-      </div>
-      <!-- END DAY 1 -->
-
-      <!-- ════════════════ DAY 2 · FRIDAY ════════════════ -->
-      <div id="day-2" class="schedule__panel" role="tabpanel" aria-labelledby="tab-2" hidden>
-
-        <!-- DISH OF THE DAY -->
-        <div class="dish-of-day" aria-label="Dish of the day">
-          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
-          <p class="dish-of-day__name">Example Ceviche Tostada</p>
-          <p class="dish-of-day__desc">
-            Example description — fresh tiger prawn ceviche on a crispy corn tostada, with avocado, pickled red onion and a hint of lime. Bright, zesty, and impossible to put down.
-          </p>
-          <div class="dish-of-day__footer">
-            <span class="dish-of-day__chef">👨‍🍳 by Chef Lucia Fernández</span>
-            <div class="dish-of-day__tags">
-              <span class="tag tag-gluten">🌾 Gluten-Free</span>
-            </div>
+          <!-- Esplora -->
+          <div class="footer__col">
+            <p class="footer__col-title">Esplora</p>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="lineup.html">Programma</a></li>
+              <li><a href="menu.html">Menù</a></li>
+              <li><a href="gallery.html">Galleria</a></li>
+              <li><a href="sponsors.html">Sponsor</a></li>
+            </ul>
           </div>
-        </div>
 
-        <!-- ARTIST CARD -->
-        <article class="artist-card-full" aria-label="Elena Vasquez">
-          <div class="artist-card-full__photo">🎷</div>
-          <div class="artist-card-full__body">
-            <div class="artist-card-full__time">
-              <span class="artist-card-full__time-value">21:00</span>
-              <span class="artist-card-full__time-end">→ 23:00</span>
-            </div>
-            <h2 class="artist-card-full__name">Elena Vasquez</h2>
-            <p class="artist-card-full__genre">Jazz · Latin · Bossa Nova</p>
-            <p class="artist-card-full__bio">
-              Elena's sultry saxophone weaves between jazz, bossa nova and Latin rhythms in a way that feels both intimate and cinematic. A performance not to be missed under the open sky.
+          <!-- Contatti -->
+          <div class="footer__col footer__col--contact">
+            <div class="footer__col-title">Contatti</div>
+            <p>
+              Hai domande sull'evento, vuoi collaborare o diventare sponsor?
+              Scrivici.
             </p>
-            <div class="artist-card-full__meta">
-              <span class="tag tag-music">🎵 Music</span>
-              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <!-- END DAY 2 -->
-
-      <!-- ════════════════ DAY 3 · SATURDAY ════════════════ -->
-      <div id="day-3" class="schedule__panel" role="tabpanel" aria-labelledby="tab-3" hidden>
-
-        <!-- DISH OF THE DAY -->
-        <div class="dish-of-day" aria-label="Dish of the day">
-          <div class="dish-of-day__eyebrow">🍽️ Dish of the day</div>
-          <p class="dish-of-day__name">Example Birria Tacos</p>
-          <p class="dish-of-day__desc">
-            Example description — braised beef birria tacos with melted cheese, rich consommé dipping broth, diced onion and fresh cilantro. A festival favourite, served hot all evening long.
-          </p>
-          <div class="dish-of-day__footer">
-            <span class="dish-of-day__chef">👨‍🍳 by Chef Carlos Mendez</span>
-            <div class="dish-of-day__tags">
-              <span class="tag tag-spicy">🌶️ Spicy</span>
-            </div>
+            <a href="contact.html" class="footer__contact-btn"> Scrivici → </a>
           </div>
         </div>
 
-        <!-- ARTIST CARD -->
-        <article class="artist-card-full" aria-label="Drumline Riot">
-          <div class="artist-card-full__photo">🥁</div>
-          <div class="artist-card-full__body">
-            <div class="artist-card-full__time">
-              <span class="artist-card-full__time-value">21:00</span>
-              <span class="artist-card-full__time-end">→ 23:00</span>
-            </div>
-            <h2 class="artist-card-full__name">Drumline Riot</h2>
-            <p class="artist-card-full__genre">Percussion · World · Afrobeat</p>
-            <p class="artist-card-full__bio">
-              Twenty drummers, one unstoppable energy. Drumline Riot fuses West African rhythms with contemporary percussion into a full-body sonic experience that shakes the ground beneath you.
-            </p>
-            <div class="artist-card-full__meta">
-              <span class="tag tag-music">🎵 Music</span>
-              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <!-- END DAY 3 -->
-
-      <!-- ════════════════ DAY 4 · SUNDAY ════════════════ -->
-      <div id="day-4" class="schedule__panel" role="tabpanel" aria-labelledby="tab-4" hidden>
-
-        <!-- DISH OF THE DAY -->
-        <div class="dish-of-day" aria-label="Dish of the day">
-          <div class="dish-of-day__eyebrow">🍽️ Dish of the day · Closing Night</div>
-          <p class="dish-of-day__name">Example Midnight Chocolate Fondue</p>
-          <p class="dish-of-day__desc">
-            Example description — dark Belgian chocolate fondue served with fresh fruit, toasted marshmallows and salted caramel biscuits. The sweetest possible way to close four incredible days.
-          </p>
-          <div class="dish-of-day__footer">
-            <span class="dish-of-day__chef">👨‍🍳 by Chef Sophie Laurent</span>
-            <div class="dish-of-day__tags">
-              <span class="tag tag-vegan">🌿 Vegetarian</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ARTIST CARD -->
-        <article class="artist-card-full" aria-label="The Neon Wolves">
-          <div class="artist-card-full__photo">🎤</div>
-          <div class="artist-card-full__body">
-            <div class="artist-card-full__time">
-              <span class="artist-card-full__time-value">21:00</span>
-              <span class="artist-card-full__time-end">→ 23:00</span>
-            </div>
-            <h2 class="artist-card-full__name">The Neon Wolves</h2>
-            <p class="artist-card-full__genre">Indie Rock · Alternative · Closing Set</p>
-            <p class="artist-card-full__bio">
-              Closing the festival with a bang, The Neon Wolves deliver an anthemic set of indie rock and electric alternative. Four days end here — and they'll make sure you never forget it.
-            </p>
-            <div class="artist-card-full__meta">
-              <span class="tag tag-music">🎵 Music</span>
-              <span class="tag" style="background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); border-color:rgba(255,255,255,0.1);">🎤 Main Stage</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <!-- END DAY 4 -->
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       FOOTER
-  ══════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <div class="footer__brand-name">🎶 CityFest</div>
-          <p class="footer__brand-desc">Four days of food, music, and good vibes in the heart of the city. Free entry, open to everyone.</p>
-          <div class="footer__socials">
-            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">👥</a>
-            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
-            <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
-          </div>
-        </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Explore</p>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lineup.html">Lineup</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Info</p>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Press Kit</a></li>
-            <li><a href="#">Volunteer</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Contact</p>
-          <div class="footer__contact-item"><span>📍</span><span>Piazza Grande, City Centre</span></div>
-          <div class="footer__contact-item"><span>📅</span><span>[START DATE] – [END DATE]</span></div>
-          <div class="footer__contact-item"><span>✉️</span><span>hello@cityfest.com</span></div>
+        <div class="footer__bottom">
+          <p>© 2026 Antica Sagra di San Rocco. Tutti i diritti riservati.</p>
+          <nav class="footer__bottom-links" aria-label="Link legali">
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="privacy"
+              >Privacy</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="cookie"
+              >Cookie</a
+            >
+            <div id="PCModal" class="modal"></div>
+          </nav>
         </div>
       </div>
-      <div class="footer__bottom">
-        <p>© 2025 CityFest. All rights reserved.</p>
-        <nav class="footer__bottom-links" aria-label="Legal links">
-          <a href="#">Privacy</a>
-          <a href="#">Cookies</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/lineup.js"></script>
-</body>
+    <script src="js/main.js"></script>
+    <script src="js/lineup.js"></script>
+    <script src="js/cookie_consent.js"></script>
+  </body>
 </html>

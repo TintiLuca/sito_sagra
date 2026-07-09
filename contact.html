@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contatti — CityFest</title>
+    <title>Contatti — Antica Sagra di San Rocco</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/privacy.css" />
   </head>
   <body>
     <!-- ══════════════════════════════════
@@ -14,20 +15,24 @@
   ══════════════════════════════════ -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo" aria-label="CityFest home">
-          <span class="navbar__logo-name">🎶 CityFest</span>
-          <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+        <a href="index.html" class="navbar__logo" aria-label="CityFest home"
+          ><img
+            src="assets/logo.png"
+            alt="Antica Sagra di San Rocco"
+            height="50"
+          />
         </a>
         <ul class="navbar__links" role="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="lineup.html">Programma</a></li>
           <li><a href="menu.html">Menù</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.html">Galleria</a></li>
           <li><a href="sponsors.html">Sponsor</a></li>
           <li><a href="contact.html" class="active">Contatti</a></li>
+          <link rel="stylesheet" href="css/cookie_consent.css" />
         </ul>
         <div class="navbar__cta">
-          <a href="contact.html" class="btn btn-secondary">Find Us</a>
+          <a href="contact.html" class="btn btn-secondary">Dove Siamo</a>
         </div>
         <button
           class="navbar__hamburger"
@@ -39,9 +44,9 @@
       </div>
       <div class="navbar__mobile" role="menu">
         <a href="index.html" role="menuitem">Home</a>
-        <a href="lineup.html" role="menuitem">Lineup</a>
+        <a href="lineup.html" role="menuitem">Programma</a>
         <a href="menu.html" role="menuitem">Menù</a>
-        <a href="gallery.html" role="menuitem">Gallery</a>
+        <a href="gallery.html" role="menuitem">Galleria</a>
         <a href="sponsors.html" role="menuitem">Sponsor</a>
         <a href="contact.html" role="menuitem">Contatti</a>
       </div>
@@ -53,7 +58,7 @@
     <section class="contact-hero" aria-label="Contact hero">
       <div class="contact-hero__dots"></div>
       <div class="container contact-hero__inner">
-        <div class="contact-hero__eyebrow"><span>📍</span> CityFest 2025</div>
+        <div class="contact-hero__eyebrow">Antica Sagra di San Rocco</div>
         <h1>Vieni a <span>trovarci</span></h1>
         <p class="contact-hero__sub">
           Hai domande, vuoi collaborare o sei semplicemente curioso? Siamo qui.
@@ -74,9 +79,8 @@
                 Dove <span>siamo</span><br />e come raggiungerci
               </h2>
               <p class="contact-info__intro">
-                CityFest si svolge in pieno centro città — raggiungibile a
-                piedi, in bici o con i mezzi pubblici. Parcheggi nelle vicinanze
-                disponibili.
+                CityFest si svolge nel pieno centro del paese — raggiungibile a
+                piedi o in bici. Parcheggi nelle vicinanze disponibili.
               </p>
             </div>
 
@@ -86,10 +90,10 @@
               <div class="info-card__body">
                 <p class="info-card__label">Dove</p>
                 <!-- ADDRESS: replace with real venue -->
-                <p class="info-card__value">Piazza Grande</p>
+                <p class="info-card__value">Piazza San Rocco</p>
                 <p class="info-card__sub">
-                  [Indirizzo completo, Città] — accesso libero da tutte le vie
-                  principali
+                  Pedemonte, San Pietro in cariano (VR) — accesso libero da
+                  tutte le vie principali
                 </p>
               </div>
             </div>
@@ -100,9 +104,7 @@
               <div class="info-card__body">
                 <p class="info-card__label">Quando</p>
                 <!-- DATE: replace with real dates -->
-                <p class="info-card__value">
-                  [DAY START] → [DAY END] [MONTH] [YEAR]
-                </p>
+                <p class="info-card__value">30 Luglio → 2 Agosto 2026</p>
                 <p class="info-card__sub">
                   Da giovedì a domenica · Ingresso libero
                 </p>
@@ -114,7 +116,7 @@
               <div class="info-card__icon">🕐</div>
               <div class="info-card__body">
                 <p class="info-card__label">Orari</p>
-                <p class="info-card__value">12:00 – 23:00</p>
+                <p class="info-card__value">19:00 – 24:00</p>
                 <p class="info-card__sub">
                   Tutti i giorni · Con qualsiasi tempo
                 </p>
@@ -122,21 +124,20 @@
             </div>
 
             <!-- Email -->
-            <div class="info-card info-card--email" data-animate>
-              <div class="info-card__icon">✉️</div>
-              <div class="info-card__body">
-                <p class="info-card__label">Email</p>
-                <!-- EMAIL: replace with real contact email -->
-                <p class="info-card__value">
-                  <a
-                    href="mailto:hello@cityfest.com"
-                    style="color: inherit; text-decoration: none"
-                    >hello@cityfest.com</a
-                  >
-                </p>
-                <p class="info-card__sub">Rispondiamo entro 48 ore</p>
-              </div>
-            </div>
+            <a
+              href="mailto:hello@cityfest.com"
+              style="color: inherit; text-decoration: none; display: block"
+            >
+              <div class="info-card info-card--email" data-animate>
+                <div class="info-card__icon">✉️</div>
+                <div class="info-card__body">
+                  <p class="info-card__label">Email</p>
+                  <!-- EMAIL: replace with real contact email -->
+                  <p class="info-card__value">sagrapedemonte@gmail.com</p>
+                  <p class="info-card__sub">Rispondiamo entro 48 ore</p>
+                </div>
+              </div></a
+            >
 
             <!-- Socials -->
             <div data-animate>
@@ -149,255 +150,150 @@
               <div class="contact-socials">
                 <!-- SOCIAL: replace href with real profile URLs -->
                 <a
-                  href="#"
+                  href="https://www.instagram.com/sagra_sanrocco_pedemonte/#"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-pill"
                   aria-label="Instagram"
                 >
-                  📸 Instagram
+                  Instagram
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/AnticaSagraSanRocco?locale=it_IT"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="social-pill"
                   aria-label="Facebook"
                 >
-                  👥 Facebook
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-pill"
-                  aria-label="TikTok"
-                >
-                  🎵 TikTok
+                  Facebook
                 </a>
               </div>
             </div>
           </div>
           <!-- END LEFT -->
 
-          <!-- ── RIGHT: Contact Form ── 
-        <div class="contact-form-wrap" data-animate>
-          <h2>Scrivici</h2>
-          <p>Hai una domanda sull'evento, vuoi diventare sponsor o collaborare con noi? Mandaci un messaggio.</p>
+          <!-- ── RIGHT: Contact Form ─ -->
+          <div id="map-container" class="contact-map-wrap">
+            <!-- ══════════════════════════════════
+       MAP — UNCOMMENT WHEN PRIVACY POLICY IS READY
+       ──────────────────────────────────
+       OPTION A · Google Maps iframe
+       Replace YOUR_EMBED_URL with the URL
+       from Google Maps > Share > Embed map-->
 
-          
-            FORM NOTE:
-            This form does not send data by default — see contact.js for instructions
-            on connecting it to Formspree, Netlify Forms, or EmailJS.
-          
-          <form id="contact-form" novalidate aria-label="Modulo di contatto">
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="contact-name">Nome <span>*</span></label>
-                <input
-                  id="contact-name"
-                  class="form-input"
-                  type="text"
-                  name="name"
-                  placeholder="Mario Rossi"
-                  required
-                  autocomplete="given-name"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-email">Email <span>*</span></label>
-                <input
-                  id="contact-email"
-                  class="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="mario@esempio.it"
-                  required
-                  autocomplete="email"
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-subject">Argomento <span>*</span></label>
-              <select id="contact-subject" class="form-select" name="subject" required>
-                <option value="" disabled selected>Seleziona un argomento…</option>
-                <option value="info">Informazioni generali</option>
-                <option value="sponsor">Diventare sponsor</option>
-                <option value="press">Press &amp; Media</option>
-                <option value="volunteer">Volontariato</option>
-                <option value="altro">Altro</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-message">Messaggio <span>*</span></label>
-              <textarea
-                id="contact-message"
-                class="form-textarea"
-                name="message"
-                placeholder="Scrivi qui il tuo messaggio…"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary form-submit">
-              Invia messaggio →
-            </button>
-
-          </form>
-
-           Success message 
-          <div id="form-success" class="form-success" role="alert" aria-live="polite">
-            <p>✅ Messaggio inviato! Ti risponderemo presto.</p>
+            <!-- Static placeholder — remove when map is active -->
           </div>
-
-        </div>
-         END RIGHT -->
+          <!--END RIGHT -->
         </div>
       </div>
     </main>
 
-    <!-- ══════════════════════════════════
-       MAP SECTION
-       ⚠️ MAP COMMENTED OUT — uncomment when:
-          1. Privacy policy is published
-          2. Cookie consent is in place
-       ──────────────────────────────────
-       OPTION A — Google Maps embed:
-       Replace YOUR_EMBED_URL with the embed
-       URL from Google Maps > Share > Embed.
-
-       OPTION B — Leaflet.js (no API key, open source):
-       1. Add in <head>:
-          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-       2. Uncomment the Leaflet block below.
-       3. Replace LAT and LNG with your venue coordinates.
-  ══════════════════════════════════ -->
-
     <!--
-  ╔══════════════════════════════════════════════════════╗
-  ║  MAP — UNCOMMENT WHEN PRIVACY POLICY IS READY        ║
-  ╚══════════════════════════════════════════════════════╝
-
-  OPTION A · Google Maps iframe
-  ─────────────────────────────
-  <section class="map-section" aria-label="Mappa">
-    <iframe
-      src="YOUR_EMBED_URL"
-      width="100%"
-      height="400"
-      style="border:0; display:block;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Mappa CityFest — Piazza Grande"
-    ></iframe>
-  </section>
-
-  OPTION B · Leaflet.js (recommended — no data sent to Google)
-  ─────────────────────────────────────────────────────────────
-  <section class="map-section" aria-label="Mappa">
-    <div id="leaflet-map" style="width:100%;height:400px;"></div>
-  </section>
-  <script>
-    const map = L.map('leaflet-map').setView([LAT, LNG], 16);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-    L.marker([LAT, LNG])
-      .addTo(map)
-      .bindPopup('<strong>CityFest 2025</strong><br>Piazza Grande')
-      .openPopup();
-  </script>
-
-  -->
-
-    <!-- Static map placeholder — shown while map is disabled -->
-    <section class="map-section" aria-label="Posizione festival">
-      <div class="map-placeholder">
-        <span class="map-placeholder__pin">📍</span>
-        <p class="map-placeholder__text">Piazza Grande — Centro città</p>
-        <p class="map-placeholder__sub">
-          La mappa interattiva sarà disponibile a breve
-        </p>
-        <!-- Opens Google Maps in a new tab — no data collection, no embed -->
-        <a
-          href="https://www.google.com/maps/search/Piazza+Grande"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary map-placeholder__directions"
-          aria-label="Apri indicazioni su Google Maps"
-        >
-          🗺️ Apri su Google Maps
-        </a>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════
-       FOOTER
-  ══════════════════════════════════ -->
+  ════════════════════════════════════════════════════
+  FOOTER — copy this block into every page
+  Replace the "active" class on the correct nav link
+  ════════════════════════════════════════════════════
+-->
     <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__grid">
+          <!-- Brand -->
           <div class="footer__brand">
-            <div class="footer__brand-name">🎶 CityFest</div>
+            <div class="footer__brand-name">
+              <img
+                src="assets/logo.png"
+                alt="Antica Sagra di San Rocco"
+                height="50"
+              />
+            </div>
             <p class="footer__brand-desc">
-              Quattro giorni di cibo, musica e buon umore nel cuore della città.
+              Quattro giorni di cibo, musica e buon umore nel cuore del paese.
               Ingresso libero, per tutti.
             </p>
             <div class="footer__socials">
-              <a href="#" class="footer__social-link" aria-label="Instagram"
-                >📸</a
-              >
-              <a href="#" class="footer__social-link" aria-label="Facebook"
-                >👥</a
-              >
-              <a href="#" class="footer__social-link" aria-label="Twitter"
-                >🐦</a
-              >
-              <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+              <!-- SOCIAL: replace href with real URLs -->
+              <a
+                href="https://www.instagram.com/sagra_sanrocco_pedemonte/#"
+                class="footer__social-link"
+                aria-label="Instagram"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-instagram-icon lucide-instagram"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/AnticaSagraSanRocco?locale=it_IT"
+                class="footer__social-link"
+                aria-label="Facebook"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-facebook-icon lucide-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  /></svg
+              ></a>
             </div>
           </div>
+
+          <!-- Esplora -->
           <div class="footer__col">
             <p class="footer__col-title">Esplora</p>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="lineup.html">Lineup</a></li>
+              <li><a href="lineup.html">Programma</a></li>
               <li><a href="menu.html">Menù</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="gallery.html">Galleria</a></li>
               <li><a href="sponsors.html">Sponsor</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col-title">Info</p>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Accessibilità</a></li>
-              <li><a href="#">Press Kit</a></li>
-              <li><a href="#">Volontari</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <p class="footer__col-title">Contatti</p>
-            <div class="footer__contact-item">
-              <span>📍</span><span>Piazza Grande, Centro</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>📅</span><span>[DATA INIZIO] – [DATA FINE]</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>✉️</span><span>hello@cityfest.com</span>
-            </div>
+
+          <!-- Contatti -->
+          <div class="footer__col footer__col--contact">
+            <div class="footer__col-title">Contatti</div>
+            <p>
+              Hai domande sull'evento, vuoi collaborare o diventare sponsor?
+              Scrivici.
+            </p>
+            <a href="contact.html" class="footer__contact-btn"> Scrivici → </a>
           </div>
         </div>
+
         <div class="footer__bottom">
-          <p>© 2025 CityFest. Tutti i diritti riservati.</p>
+          <p>© 2026 Antica Sagra di San Rocco. Tutti i diritti riservati.</p>
           <nav class="footer__bottom-links" aria-label="Link legali">
-            <a href="#">Privacy</a>
-            <a href="#">Cookie</a>
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="privacy"
+              >Privacy</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="cookie"
+              >Cookie</a
+            >
+            <div id="PCModal" class="modal"></div>
           </nav>
         </div>
       </div>
@@ -405,5 +301,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/cookie_consent.js"></script>
   </body>
 </html>

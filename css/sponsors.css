@@ -14,19 +14,30 @@
 }
 
 .sponsors-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 60%, rgba(255,209,102,0.18) 0%, transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(255,87,51,0.15) 0%, transparent 45%);
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(255, 209, 102, 0.18) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(255, 87, 51, 0.15) 0%,
+      transparent 45%
+    );
   pointer-events: none;
 }
 
 .sponsors-hero__dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1.5px,
+    transparent 1.5px
+  );
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -40,8 +51,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  background: rgba(255,255,255,0.07);
-  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-full);
   padding: 0.35rem 1rem;
   color: var(--yellow);
@@ -61,10 +72,12 @@
   animation: fadeUp 0.5s 0.1s ease both;
 }
 
-.sponsors-hero h1 span { color: var(--yellow); }
+.sponsors-hero h1 span {
+  color: var(--yellow);
+}
 
 .sponsors-hero__sub {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.05rem;
   max-width: 520px;
   margin: 0 auto;
@@ -120,49 +133,67 @@
 ══════════════════════════════════ */
 .tier--main {
   background: var(--dark);
-  border-bottom: 3px solid rgba(255,209,102,0.2);
+  border-bottom: 3px solid rgba(255, 209, 102, 0.2);
 }
 
 .tier--main .tier__badge {
   color: var(--yellow);
-  background: rgba(255,209,102,0.1);
-  border-color: rgba(255,209,102,0.4);
+  background: rgba(255, 209, 102, 0.1);
+  border-color: rgba(255, 209, 102, 0.4);
 }
 
-.tier--main .tier__title  { color: var(--white); font-size: clamp(2rem, 4vw, 3rem); }
-.tier--main .tier__desc   { color: rgba(255,255,255,0.55); }
+.tier--main .tier__title {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.tier--main .tier__desc {
+  color: rgba(255, 255, 255, 0.55);
+}
 
 /* Main sponsor card */
 .main-sponsor-card {
   position: relative;
   z-index: 1;
   max-width: 780px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.04);
-  border: 2px solid rgba(255,209,102,0.25);
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 209, 102, 0.25);
   border-radius: var(--radius-lg);
   padding: var(--space-3xl) var(--space-2xl);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-xl);
-  box-shadow: 0 0 60px rgba(255,209,102,0.06), 0 16px 48px rgba(0,0,0,0.4);
-  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  box-shadow:
+    0 0 60px rgba(255, 209, 102, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.4);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
 }
 
 .main-sponsor-card:hover {
-  border-color: rgba(255,209,102,0.5);
-  box-shadow: 0 0 80px rgba(255,209,102,0.1), 0 24px 64px rgba(0,0,0,0.5);
+  border-color: rgba(255, 209, 102, 0.5);
+  box-shadow:
+    0 0 80px rgba(255, 209, 102, 0.1),
+    0 24px 64px rgba(0, 0, 0, 0.5);
   transform: translateY(-4px);
 }
 
 /* Gold shimmer ring on main card */
 .main-sponsor-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255,209,102,0.3), transparent 40%, transparent 60%, rgba(255,209,102,0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.3),
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 209, 102, 0.2)
+  );
   z-index: -1;
   pointer-events: none;
 }
@@ -175,7 +206,7 @@
   justify-content: center;
   background: var(--white);
   border-radius: var(--radius-md);
-  border: 2px solid rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   padding: var(--space-lg);
 }
@@ -214,7 +245,7 @@
 
 .main-sponsor-card__desc {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   line-height: 1.7;
   max-width: 420px;
   margin: 0 auto var(--space-lg);
@@ -232,7 +263,9 @@
   font-size: 0.88rem;
   border: 2px solid var(--dark);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
   text-decoration: none;
 }
 
@@ -247,17 +280,22 @@
 ══════════════════════════════════ */
 .tier--gold {
   background: var(--cream);
-  border-bottom: 3px solid rgba(26,26,46,0.07);
+  border-bottom: 3px solid rgba(26, 26, 46, 0.07);
 }
 
 .tier--gold .tier__badge {
-  color: #B8860B;
-  background: rgba(184,134,11,0.08);
-  border-color: rgba(184,134,11,0.35);
+  color: #b8860b;
+  background: rgba(184, 134, 11, 0.08);
+  border-color: rgba(184, 134, 11, 0.35);
 }
 
-.tier--gold .tier__title  { color: var(--dark); font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
-.tier--gold .tier__desc   { color: var(--gray); }
+.tier--gold .tier__title {
+  color: var(--dark);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+.tier--gold .tier__desc {
+  color: var(--gray);
+}
 
 /* Gold sponsor grid */
 .gold-grid {
@@ -277,7 +315,9 @@
   gap: var(--space-md);
   box-shadow: var(--shadow-md);
   text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
   border-top: 5px solid var(--saffron);
 }
 
@@ -294,7 +334,7 @@
   justify-content: center;
   background: var(--gray-light);
   border-radius: var(--radius-sm);
-  border: 1.5px solid rgba(26,26,46,0.07);
+  border: 1.5px solid rgba(26, 26, 46, 0.07);
   padding: var(--space-md);
   overflow: hidden;
 }
@@ -330,12 +370,17 @@
 
 .tier--community .tier__badge {
   color: var(--teal);
-  background: rgba(6,167,125,0.1);
-  border-color: rgba(6,167,125,0.35);
+  background: rgba(6, 167, 125, 0.1);
+  border-color: rgba(6, 167, 125, 0.35);
 }
 
-.tier--community .tier__title { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); }
-.tier--community .tier__desc  { color: rgba(255,255,255,0.45); }
+.tier--community .tier__title {
+  color: var(--white);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.tier--community .tier__desc {
+  color: rgba(255, 255, 255, 0.45);
+}
 
 /* Community logo mosaic */
 .community-grid {
@@ -346,8 +391,8 @@
 }
 
 .community-card {
-  background: rgba(255,255,255,0.05);
-  border: 1.5px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   width: 160px;
   height: 80px;
@@ -357,12 +402,15 @@
   padding: var(--space-md);
   text-decoration: none;
   overflow: hidden;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
 }
 
 .community-card:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
 }
 
@@ -381,7 +429,7 @@
 }
 
 .community-card .sponsor-logo-placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 0.8rem;
 }
 
@@ -407,7 +455,7 @@
 }
 
 .sponsor-cta p {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: var(--space-xl);
@@ -429,11 +477,20 @@
    RESPONSIVE
 ══════════════════════════════════ */
 @media (max-width: 860px) {
-  .gold-grid { grid-template-columns: repeat(2, 1fr); }
+  .gold-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-  .gold-grid { grid-template-columns: 1fr; }
-  .main-sponsor-card { padding: var(--space-xl) var(--space-lg); }
-  .community-card { width: 130px; height: 70px; }
+  .gold-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-sponsor-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  .community-card {
+    width: 130px;
+    height: 70px;
+  }
 }

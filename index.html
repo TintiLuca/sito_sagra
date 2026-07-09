@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CityFest — Food & Music Festival</title>
+    <title>Antica Sagra di San Rocco</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/privacy.css" />
+    <link rel="stylesheet" href="css/cookie_consent.css" />
   </head>
   <body>
     <!-- ══════════════════════════════════
@@ -15,19 +17,22 @@
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar__inner">
         <a href="index.html" class="navbar__logo" aria-label="CityFest home">
-          <span class="navbar__logo-name">🎶 CityFest</span>
-          <span class="navbar__logo-tagline">Food &amp; Music Festival</span>
+          <img
+            src="assets/logo.png"
+            alt="Antica Sagra di San Rocco"
+            height="50"
+          />
         </a>
         <ul class="navbar__links" role="list">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="lineup.html">Lineup</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="sponsors.html">Sponsors</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="lineup.html">Programma</a></li>
+          <li><a href="menu.html">Menù</a></li>
+          <li><a href="gallery.html">Galleria</a></li>
+          <li><a href="sponsors.html">Sponsor</a></li>
+          <li><a href="contact.html">Contatti</a></li>
         </ul>
         <div class="navbar__cta">
-          <a href="contact.html" class="btn btn-secondary">Find Us</a>
+          <a href="contact.html" class="btn btn-secondary">Dove Siamo</a>
         </div>
         <button
           class="navbar__hamburger"
@@ -39,11 +44,21 @@
       </div>
       <div class="navbar__mobile" role="menu">
         <a href="index.html" role="menuitem">Home</a>
-        <a href="lineup.html" role="menuitem">Lineup</a>
+        <a href="lineup.html" role="menuitem">Programma</a>
         <a href="menu.html" role="menuitem">Menu</a>
         <a href="gallery.html" role="menuitem">Gallery</a>
         <a href="sponsors.html" role="menuitem">Sponsors</a>
         <a href="contact.html" role="menuitem">Contact</a>
+      </div>
+      <div class="announcement-banner" id="announcement-banner">
+        <p>📅 Ti aspettiamo <strong>dal 30 Luglio al 2 Agosto</strong></p>
+        <button
+          class="announcement-banner__close"
+          id="banner-close"
+          aria-label="Chiudi"
+        >
+          &#x2715;
+        </button>
       </div>
     </nav>
 
@@ -62,62 +77,83 @@
         <!-- Left: text -->
         <div class="hero__content">
           <div class="hero__eyebrow">
-            <span>🗓️</span>
-            <!-- DATE: replace with your festival dates e.g. "July 18 – 20, 2025" -->
-            From [START DATE] to [END DATE]
+            <img
+              src="assets/logo.png"
+              alt="Antica Sagra di San Rocco"
+              height="200"
+            />
+            <!--<span>🗓️</span>
+            DATE: replace with your festival dates e.g. "July 18 – 20, 2025"
+            Dal 30 luglio al 2 agosto-->
           </div>
           <h1 class="hero__title">
-            The City<br />
+            Antica sagra di<br />
             <span class="accent"
-              >Comes <span class="accent-coral">Alive</span></span
+              >San <span class="accent-coral">Rocco</span></span
             >
           </h1>
           <p class="hero__subtitle">
-            Three days of incredible music, bold flavours, and unforgettable
-            moments — right in the heart of the city. Free entry, good vibes
-            only.
+            Quattro giorni di musica, sapori tradizionali e momenti
+            indimenticabili
           </p>
+          <!-- Three days of incredible music, bold flavours, and unforgettable
+            moments — right in the heart of the city. Free entry, good vibes
+            only.-->
           <div class="hero__actions">
-            <a href="lineup.html" class="btn btn-primary">See the Lineup →</a>
-            <a href="menu.html" class="btn btn-outline btn-outline--light"
-              >Explore Menu</a
+            <a href="lineup.html" class="btn btn-primary"
+              >Esplora il programma →</a
             >
+            <a
+              href="menu.html"
+              class="btn btn-outline"
+              style="color: var(--yellow); border-color: var(--yelllow)"
+              >Scopri il Menù</a
+            ><!--btn-outline--light-->
           </div>
           <div class="hero__info">
             <div class="hero__pill">
-              <span>📍</span><span>Piazza Grande</span>
+              <span>📍</span><span>Piazza San Rocco Pedemonte (VR)</span>
             </div>
             <div class="hero__pill">
-              <span>🎟️</span><span>Free Admission</span>
+              <span>🎟️</span><span>Entrata libera</span>
             </div>
-            <div class="hero__pill"><span>🌤️</span><span>Outdoors</span></div>
+            <div class="hero__pill"><span>🌤️</span><span>All'aperto</span></div>
           </div>
         </div>
 
         <!-- Right: floating cards (decorative) -->
         <div class="hero__cards" aria-hidden="true">
           <div class="hero__card hero__card--main">
-            <span class="card-emoji">🎉</span>
-            <h3>CityFest 2025</h3>
-            <p>Food · Music · Community</p>
+            <img src="assets/img/squadra_1_edit.jpg" alt="" />
+            <!-- <span class="card-emoji">🎉</span>
+            <h3>Antica Sagra di San Rocco</h3>
+            <p>Cibo · Musica · Comunità</p> -->
           </div>
           <div class="hero__card hero__card--artist">
-            <p class="mini-card-label">Tonight's headliner</p>
+            <img src="assets/img/vista_cucina.jpeg" alt="" />
+          </div>
+          <!--<p class="mini-card-label">Tonight's headliner</p>
             <p class="mini-card-value">The Groove Collective</p>
             <p class="mini-card-sub">🎸 Funk · Soul · Live Band</p>
-          </div>
+          
           <div class="hero__card hero__card--food">
             <p class="mini-card-label">Chef's special</p>
             <p class="mini-card-value">🌮 Truffle Tacos</p>
             <p class="mini-card-sub">by Chef Marco Rossi</p>
-          </div>
-          <div class="hero__card hero__card--date">
-            <p class="mini-card-label">Event status</p>
+          </div> -->
+          <!--<div class="hero__card hero__card--date">
+            <p class="mini-card-label">Stato</p>
             <p class="mini-card-value">
-              <span class="mini-card-dot"></span>Coming Soon
+              <span class="mini-card-dot"></span>In preparazione
             </p>
-            <p class="mini-card-sub">Piazza Grande</p>
+            <p class="mini-card-sub">Pedemonte (VR)</p>
           </div>
+
+          <img
+            class="hero__card1 hero__card--photo1"
+            src="assets/img/squadra_1_edit.jpg"
+            alt=""
+          />-->
         </div>
       </div>
     </section>
@@ -128,16 +164,18 @@
   ══════════════════════════════════ -->
     <div class="date-strip" aria-label="Festival dates">
       <div class="date-strip__inner">
-        <p class="date-strip__label">📅 Festival dates</p>
+        <p class="date-strip__label">📅 Giorni di Sagra</p>
         <div class="date-strip__range">
           <div class="date-strip__date">
-            <span class="date-strip__day">[DAY START]</span>
-            <span class="date-strip__month">[MONTH START] [YEAR]</span>
+            <span class="date-strip__day">30</span>
+            <span class="date-strip__month">Luglio</span>
+            <span class="date-strip__year">2026</span>
           </div>
           <span class="date-strip__arrow">→</span>
           <div class="date-strip__date">
-            <span class="date-strip__day">[DAY END]</span>
-            <span class="date-strip__month">[MONTH END] [YEAR]</span>
+            <span class="date-strip__day">2</span>
+            <span class="date-strip__month">Agosto</span>
+            <span class="date-strip__year">2026</span>
           </div>
         </div>
       </div>
@@ -150,38 +188,72 @@
       <div class="container">
         <div class="section-header">
           <div class="squiggle"></div>
-          <h2 id="highlights-title">What to Expect</h2>
-          <p>
-            A weekend that feeds your ears and your stomach in equal measure.
-          </p>
+          <h2 id="highlights-title">Cosa puoi aspettarti</h2>
+          <p>Quattro giorni di buona musica e buon cibo in egual misura</p>
         </div>
         <div class="highlights__grid">
           <div class="highlight-card highlight-card--coral" data-animate>
-            <span class="highlight-card__icon">🎵</span>
-            <h3>Live Music</h3>
+            <img
+              class="highlight-card__icon"
+              src="assets/img/Band.jpeg"
+              alt=""
+              style="border: 2px, solid, var(--coral)"
+            />
+            <h3>Musica dal vivo</h3>
             <p>
-              From jazz to funk, indie to world music — three stages running
-              across all three days with over 30 artists performing live.
+              Dagli anni '80, ai cartoni, ai giorni nostri, musica coinvolgente
+              per tutte le età
             </p>
           </div>
           <div class="highlight-card highlight-card--teal" data-animate>
-            <span class="highlight-card__icon">🍽️</span>
-            <h3>Food Village</h3>
-            <p>
-              Twenty+ local vendors and guest chefs bringing the best street
-              food, signature dishes, and daring flavour combinations from
-              across the region.
-            </p>
+            <img
+              class="highlight-card__icon"
+              src="assets/img/risotto_quad.jpg"
+              alt=""
+              style="border: 2px, solid, var(--teal)"
+            />
+            <h3>Cibo Tipico</h3>
+            <p>Cucina del territorio, sapori autentici e qualche sorpresa</p>
+            <p>Per tutti i gusti.</p>
           </div>
           <div class="highlight-card highlight-card--yellow" data-animate>
-            <span class="highlight-card__icon">🌟</span>
-            <h3>Free for All</h3>
-            <p>
-              No tickets, no barriers. CityFest is a free event open to everyone
-              — come for an hour or stay for the whole weekend.
-            </p>
+            <img
+              class="highlight-card__icon"
+              src="assets/img/fiori_quad.jpeg"
+              alt=""
+              style="border: 2px, solid, var(--yellow)"
+            />
+            <h3>Pesca dei Fiori</h3>
+            <p>1 tappo = 1,50€</p>
+            <p>4 tappi = 5€</p>
+          </div>
+          <div class="highlight-card highlight-card--coral" data-animate>
+            <img
+              class="highlight-card__icon"
+              src="assets/logo_asilo.png"
+              alt=""
+              style="border: 2px, solid, var(--coral); width: 100%"
+            />
+            <h3>Pesca di Beneficenza</h3>
+            <p>Organizzata dalla Scuola dell'Infanzia "Sorriso"</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       MISSION
+  ══════════════════════════════════ -->
+    <section class="mission" aria-labelledby="mission-title">
+      <div class="container mission__inner">
+        <span class="mission__icon" aria-hidden="true">🎠</span>
+        <h2 id="mission-title">La nostra missione</h2>
+        <p>
+          Ogni piatto servito e ogni biglietto venduto contribuisce a un
+          obiettivo concreto: il ricavato della sagra sarà infatti destinato
+          alla sistemazione del parco giochi parrocchiale, per regalare ai
+          bambini del paese uno spazio sicuro e rinnovato dove giocare.
+        </p>
       </div>
     </section>
 
@@ -192,45 +264,59 @@
       <div class="container">
         <div class="section-header">
           <div class="squiggle"></div>
-          <h2 id="artists-title">Featured Artists</h2>
-          <p>Just a taste of who's taking the stage this year.</p>
+          <h2 id="artists-title">Artisti invitati</h2>
+          <p>Alcuni degli artisti che si esibiranno quest'anno.</p>
         </div>
         <div class="artists-teaser__grid">
           <div class="artist-card" data-animate>
-            <div class="artist-card__img">🎸</div>
+            <div class="artist-card__img">
+              <img
+                src="assets/band/cartoonici.jpg"
+                alt=""
+                style="object-fit: cover; height: 90%"
+              />
+            </div>
             <div class="artist-card__body">
-              <p class="artist-card__name">The Groove Collective</p>
-              <p class="artist-card__genre">Funk · Soul · Live Band</p>
-              <span class="tag tag-music">🎵 Music</span>
+              <p class="artist-card__name">Cartoonici</p>
+              <p class="artist-card__genre">Rock · Cartoni</p>
             </div>
           </div>
           <div class="artist-card" data-animate>
-            <div class="artist-card__img">🎷</div>
+            <div class="artist-card__img">
+              <img src="assets/band/The Waves Logo white.png" alt="" />
+            </div>
             <div class="artist-card__body">
-              <p class="artist-card__name">Elena Vasquez</p>
-              <p class="artist-card__genre">Jazz · Latin</p>
-              <span class="tag tag-music">🎵 Music</span>
+              <p class="artist-card__name">The Waves</p>
+              <p class="artist-card__genre">Dance · Pop</p>
             </div>
           </div>
           <div class="artist-card" data-animate>
-            <div class="artist-card__img">👨‍🍳</div>
+            <div class="artist-card__img">
+              <img
+                src="assets/band/red_flaminga.png"
+                alt=""
+                style="object-fit: cover; height: 90%"
+              />
+            </div>
             <div class="artist-card__body">
-              <p class="artist-card__name">Chef Marco Rossi</p>
-              <p class="artist-card__genre">Italian Street Food</p>
-              <span class="tag tag-food">🍽️ Food</span>
+              <p class="artist-card__name">Red Flaminga</p>
+              <p class="artist-card__genre">Pop · Anni '80</p>
             </div>
           </div>
           <div class="artist-card" data-animate>
-            <div class="artist-card__img">🥁</div>
+            <div class="artist-card__img">
+              <img src="assets/band/venanzio.jpg" alt="" />
+            </div>
             <div class="artist-card__body">
-              <p class="artist-card__name">Drumline Riot</p>
-              <p class="artist-card__genre">Percussion · World</p>
-              <span class="tag tag-music">🎵 Music</span>
+              <p class="artist-card__name">The Venanzio Brothers</p>
+              <p class="artist-card__genre">Country Rock · Pop · Dance</p>
             </div>
           </div>
         </div>
         <div class="artists-teaser__cta">
-          <a href="lineup.html" class="btn btn-secondary">Full Lineup →</a>
+          <a href="lineup.html" class="btn btn-secondary"
+            >Tutto il programma →</a
+          >
         </div>
       </div>
     </section>
@@ -243,34 +329,36 @@
         <div class="food-teaser__inner">
           <div class="food-teaser__content">
             <div class="squiggle"></div>
-            <h2 id="food-title">A Feast for Every Taste</h2>
+            <h2 id="food-title">Sapori per tutti i gusti</h2>
             <p>
-              Our food village brings together the city's boldest chefs and most
-              beloved street vendors. Every dish tells a story — and some come
-              paired with a live performance.
+              Dalla pasta fresca alle grigliate, dai piatti della tradizione
+              alle proposte vegetariane: la nostra cucina propone sapori genuini
+              per quattro giorni, da gustare a ritmo di musica dal vivo.
             </p>
-            <a href="menu.html" class="btn btn-primary">Browse the Menu →</a>
+            <a href="menu.html" class="btn btn-primary">Esplora il Menù →</a>
           </div>
           <div class="food-teaser__dishes">
             <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🍚</span>
+              <p class="dish-mini__name">Risotto al Tastasal</p>
+              <p class="dish-mini__vendor">Solo venerdì 31 e domenica 2</p>
+            </div>
+            <div class="dish-mini" data-animate>
+              <span class="dish-mini__emoji">🥩</span>
+              <p class="dish-mini__name">Grigliata Mista</p>
+              <p class="dish-mini__vendor">
+                Polenta, salamella, wurstel, pollo
+              </p>
+            </div>
+            <div class="dish-mini" data-animate>
               <span class="dish-mini__emoji">🌮</span>
-              <p class="dish-mini__name">Truffle Tacos</p>
-              <p class="dish-mini__vendor">Chef Marco Rossi</p>
+              <p class="dish-mini__name">Pulled Pork</p>
+              <p class="dish-mini__vendor">Con salsa Coleslaw</p>
             </div>
             <div class="dish-mini" data-animate>
-              <span class="dish-mini__emoji">🍜</span>
-              <p class="dish-mini__name">Spicy Ramen</p>
-              <p class="dish-mini__vendor">Noodle District</p>
-            </div>
-            <div class="dish-mini" data-animate>
-              <span class="dish-mini__emoji">🧆</span>
-              <p class="dish-mini__name">Falafel Wrap</p>
-              <p class="dish-mini__vendor">Casa Levante</p>
-            </div>
-            <div class="dish-mini" data-animate>
-              <span class="dish-mini__emoji">🍦</span>
-              <p class="dish-mini__name">Gelato Bar</p>
-              <p class="dish-mini__vendor">La Cremeria</p>
+              <span class="dish-mini__emoji">🧀</span>
+              <p class="dish-mini__name">Gnocchi di Malga</p>
+              <p class="dish-mini__vendor">Solo giovedì 30 e sabato 1</p>
             </div>
           </div>
         </div>
@@ -284,10 +372,10 @@
       <div class="container">
         <div class="section-header">
           <div class="squiggle"></div>
-          <h2 id="gallery-title">Last Year's Vibes</h2>
+          <h2 id="gallery-title">Ricordi della festa</h2>
           <p>
-            A few snapshots from CityFest 2024 — the memories that keep us
-            coming back.
+            Alcune fotografie delle edizioni passate, ciò che continuiamo a
+            ricordare.
           </p>
         </div>
       </div>
@@ -320,7 +408,39 @@
         </div>
       </div>
       <div class="gallery-strip__cta">
-        <a href="gallery.html" class="btn btn-outline">Full Gallery →</a>
+        <a href="gallery.html" class="btn btn-outline">Galleria completa →</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       SPONSORS TEASER
+  ══════════════════════════════════ -->
+    <section class="sponsors-teaser" aria-labelledby="sponsors-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="squiggle"></div>
+          <h2 id="sponsors-title">Visita i nostri sponsor</h2>
+          <p>Le aziende e attività che sostengono la sagra ogni anno</p>
+        </div>
+        <div class="sponsors-teaser__grid">
+          <div class="sponsor-teaser-card" data-animate>
+            <div class="sponsor-logo-placeholder">Logo<br />Sponsor 1</div>
+          </div>
+          <div class="sponsor-teaser-card" data-animate>
+            <div class="sponsor-logo-placeholder">Logo<br />Sponsor 2</div>
+          </div>
+          <div class="sponsor-teaser-card" data-animate>
+            <div class="sponsor-logo-placeholder">Logo<br />Sponsor 3</div>
+          </div>
+          <div class="sponsor-teaser-card" data-animate>
+            <div class="sponsor-logo-placeholder">Logo<br />Sponsor 4</div>
+          </div>
+        </div>
+        <div class="sponsors-teaser__cta">
+          <a href="sponsors.html" class="btn btn-secondary"
+            >Vedi tutti gli sponsor →</a
+          >
+        </div>
       </div>
     </section>
 
@@ -332,97 +452,144 @@
         <div class="info-band__grid">
           <div class="info-band__item">
             <span class="info-band__icon">📅</span>
-            <p class="info-band__label">When</p>
+            <p class="info-band__label">Quando</p>
             <!-- DATE: replace with festival dates -->
-            <p class="info-band__value">[DAY START]–[DAY END] [MONTH]</p>
-            <p class="info-band__sub">
-              [WEEKDAY START] to [WEEKDAY END] · [YEAR]
-            </p>
+            <p class="info-band__value">30 Luglio – 2 Agosto</p>
+            <p class="info-band__sub">da Giovedì a Domenica · 2026</p>
           </div>
           <div class="info-band__item">
             <span class="info-band__icon">📍</span>
-            <p class="info-band__label">Where</p>
-            <p class="info-band__value">Piazza Grande</p>
-            <p class="info-band__sub">City Centre · Free Outdoor Event</p>
+            <p class="info-band__label">Dove</p>
+            <p class="info-band__value">Piazza San Rocco</p>
+            <p class="info-band__sub">Pedemonte (VR) · Evento all'aperto</p>
           </div>
           <div class="info-band__item">
             <span class="info-band__icon">🕐</span>
-            <p class="info-band__label">Hours</p>
-            <p class="info-band__value">12:00 – 23:00</p>
-            <p class="info-band__sub">All three days · Rain or shine</p>
+            <p class="info-band__label">Orari</p>
+            <p class="info-band__value">19:00 – 24:00</p>
+            <p class="info-band__sub">
+              Tutti i quattro giorni · Con qualsiasi tempo
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════
-       FOOTER
-  ══════════════════════════════════ -->
+    <!--
+  ════════════════════════════════════════════════════
+  FOOTER — copy this block into every page
+  Replace the "active" class on the correct nav link
+  ════════════════════════════════════════════════════
+-->
     <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__grid">
+          <!-- Brand -->
           <div class="footer__brand">
-            <div class="footer__brand-name">🎶 CityFest</div>
+            <div class="footer__brand-name">
+              <img src="assets/logo.png" alt="CityFest" height="100" />
+            </div>
             <p class="footer__brand-desc">
-              Three days of food, music, and good vibes in the heart of the
-              city. Free entry, open to everyone.
+              Quattro giorni di cibo, musica e buon umore nel cuore del paese.
+              Ingresso libero, per tutti.
             </p>
             <div class="footer__socials">
-              <a href="#" class="footer__social-link" aria-label="Instagram"
-                >📸</a
-              >
-              <a href="#" class="footer__social-link" aria-label="Facebook"
-                >👥</a
-              >
-              <a href="#" class="footer__social-link" aria-label="Twitter"
-                >🐦</a
-              >
-              <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+              <!-- SOCIAL: replace href with real URLs -->
+              <a
+                href="https://www.instagram.com/sagra_sanrocco_pedemonte/#"
+                class="footer__social-link"
+                aria-label="Instagram"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-instagram-icon lucide-instagram"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/AnticaSagraSanRocco?locale=it_IT"
+                class="footer__social-link"
+                aria-label="Facebook"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-facebook-icon lucide-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  /></svg
+              ></a>
             </div>
           </div>
+
+          <!-- Esplora -->
           <div class="footer__col">
-            <p class="footer__col-title">Explore</p>
+            <p class="footer__col-title">Esplora</p>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="lineup.html">Lineup</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="sponsors.html">Sponsors</a></li>
+              <li><a href="lineup.html">Programma</a></li>
+              <li><a href="menu.html">Menù</a></li>
+              <li><a href="gallery.html">Galleria</a></li>
+              <li><a href="sponsors.html">Sponsor</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <p class="footer__col-title">Info</p>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Accessibility</a></li>
-              <li><a href="#">Press Kit</a></li>
-              <li><a href="#">Volunteer</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <p class="footer__col-title">Contact</p>
-            <div class="footer__contact-item">
-              <span>📍</span><span>Piazza Grande, City Centre</span>
-            </div>
-            <!-- DATE: update with festival dates -->
-            <div class="footer__contact-item">
-              <span>📅</span><span>[START DATE] – [END DATE]</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>✉️</span><span>hello@cityfest.com</span>
-            </div>
+
+          <!-- Contatti -->
+          <div class="footer__col footer__col--contact">
+            <div class="footer__col-title">Contatti</div>
+            <p>
+              Hai domande sull'evento, vuoi collaborare o diventare sponsor?
+              Scrivici.
+            </p>
+            <a href="contact.html" class="footer__contact-btn"> Scrivici → </a>
           </div>
         </div>
+
         <div class="footer__bottom">
-          <p>© 2025 CityFest. All rights reserved.</p>
-          <nav class="footer__bottom-links" aria-label="Legal links">
-            <a href="#">Privacy</a>
-            <a href="#">Cookies</a>
+          <p>© 2026 Antica Sagra di San Rocco. Tutti i diritti riservati.</p>
+          <nav class="footer__bottom-links" aria-label="Link legali">
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="privacy"
+              >Privacy</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="open-policy"
+              data-policy="cookie"
+              >Cookie</a
+            >
+            <div id="PCModal" class="modal"></div>
           </nav>
         </div>
       </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/cookie_consent.js"></script>
+    <script>
+      const strip_close = document.querySelector("#banner-close");
+      strip_close.addEventListener("click", () => {
+        const strip_banner = document.querySelector("#announcement-banner");
+        strip_banner.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>

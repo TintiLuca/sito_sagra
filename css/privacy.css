@@ -1,0 +1,286 @@
+/* ============================================
+   CITY FESTIVAL — Privacy & Cookie Pages
+   ============================================ */
+
+.policy-hero {
+  background: var(--dark);
+  padding: calc(72px + var(--space-xl)) 0 var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.policy-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(6, 167, 125, 0.12) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(255, 209, 102, 0.1) 0%,
+      transparent 45%
+    );
+  pointer-events: none;
+}
+
+.policy-hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.04) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.policy-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.policy-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 1rem;
+  color: var(--yellow);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.policy-hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.policy-hero__meta {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+}
+
+/* ── Body layout ── 
+.policy-body {
+  background: var(--cream);
+  padding: var(--space-3xl) 0;
+}*/
+
+/*.policy-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* ── Sticky index sidebar ── */
+.policy-index {
+  position: sticky;
+  top: calc(72px + var(--space-lg));
+  background: var(--white);
+  border: 2.5px solid var(--dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.policy-index__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  margin-bottom: var(--space-md);
+}
+
+.policy-index__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.policy-index__list a {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gray);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.policy-index__list a:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+.policy-index__list a.active {
+  background: var(--dark);
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+/* ── Article content ── 
+.policy-article {
+  background: var(--white);
+  border: 2.5px solid var(--dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}*/
+
+.policy-article h1 {
+  text-align: center;
+  color: var(--coral);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.policy-section {
+  padding-top: var(--space-2xl);
+  margin-top: var(--space-xl);
+  border-top: 1.5px solid rgba(26, 26, 46, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*text-align: center;  Centers the text inside the paragraphs too */
+}
+
+.policy-section:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.policy-section__num {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--coral);
+  margin-bottom: var(--space-sm);
+}
+
+.policy-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--dark);
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+}
+
+.policy-section p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+}
+
+.policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section ul {
+  margin: var(--space-sm) 0 var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.policy-section ul li {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.policy-section a {
+  color: var(--coral);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.policy-section a:hover {
+  color: var(--terracotta);
+}
+
+/* Highlight box */
+.policy-box {
+  background: #fff8f0;
+  border: 2px solid var(--saffron);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.policy-box p {
+  margin: 0;
+  font-size: 0.88rem !important;
+  color: #555 !important;
+}
+
+.policy-box strong {
+  color: var(--dark);
+}
+
+/* Controller info table */
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  font-size: 0.9rem;
+}
+
+.policy-table td {
+  padding: 10px 14px;
+  border: 1.5px solid rgba(26, 26, 46, 0.1);
+  line-height: 1.5;
+  vertical-align: top;
+  color: var(--dark);
+}
+
+.policy-table td:first-child {
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+  width: 38%;
+  background: var(--cream);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .policy-layout {
+    grid-template-columns: 1fr;
+  }
+  .policy-index {
+    position: static;
+    display: none; /* hide sidebar on mobile — TOC not needed on small screens */
+  }
+}
+
+@media (max-width: 560px) {
+  .policy-article {
+    padding: var(--space-lg);
+  }
+}

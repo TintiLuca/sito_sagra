@@ -1,106 +1,65 @@
 /* ============================================
    CITY FESTIVAL — Contact JS (contact.js)
    ============================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  function activateMap() {
+    // const placeholder = document.getElementById("map-placeholder");
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  const form       = document.getElementById('contact-form');
-  const successMsg = document.getElementById('form-success');
-
-  if (!form) return;
-
-  // ── Simple client-side validation ──
-  function validateField(input) {
-    const value = input.value.trim();
-    const isRequired = input.hasAttribute('required');
-    const isEmail = input.type === 'email';
-
-    let error = '';
-
-    if (isRequired && !value) {
-      error = 'Questo campo è obbligatorio.';
-    } else if (isEmail && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      error = 'Inserisci un indirizzo email valido.';
-    }
-
-    setFieldState(input, error);
-    return !error;
+    // const map = document.getElementById("google-map");
+    // if (map) {
+    //   map.style.display = "block";
+    // }
+    // if (placeholder) placeholder.style.display = "none";
+    const placeholder = document.getElementById("map-container");
+    placeholder.innerHTML = "";
+    placeholder.innerHTML = `<iframe
+              id="google-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.23675207075!2d10.91764902613622!3d45.503051803837565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781e3704ee39e41%3A0x267f1c0283b5a51b!2sPiazza%20San%20Rocco%2C%2037029%20Pedemonte%20VR!5e0!3m2!1sit!2sit!4v1773612053929!5m2!1sit!2sit"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Antica Sagra di San Rocco"
+            ></iframe>`;
   }
 
-  function setFieldState(input, errorMsg) {
-    const group = input.closest('.form-group');
-    if (!group) return;
-
-    let errorEl = group.querySelector('.form-error');
-
-    if (errorMsg) {
-      input.style.borderColor = 'var(--coral)';
-      input.style.boxShadow   = '0 0 0 3px rgba(255,87,51,0.15)';
-      if (!errorEl) {
-        errorEl = document.createElement('p');
-        errorEl.className = 'form-error';
-        errorEl.style.cssText = 'color:var(--coral);font-size:0.75rem;margin-top:4px;';
-        group.appendChild(errorEl);
-      }
-      errorEl.textContent = errorMsg;
-    } else {
-      input.style.borderColor = '#16A34A';
-      input.style.boxShadow   = '0 0 0 3px rgba(22,163,74,0.1)';
-      if (errorEl) errorEl.remove();
-    }
+  // Load map immediately if consent was already given on a previous visit
+  if (window.CookieConsent && window.CookieConsent.accepted) {
+    activateMap();
   }
 
-  // Validate on blur
-  form.querySelectorAll('input, textarea, select').forEach(field => {
-    field.addEventListener('blur', () => validateField(field));
-    field.addEventListener('input', () => {
-      // Clear error as user types
-      if (field.style.borderColor === 'var(--coral)') validateField(field);
-    });
-  });
+  // Load map the moment the user accepts in the banner
+  document.addEventListener("cookieConsentAccepted", activateMap);
 
-  // ── Form submit ──
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  function deactivateMap() {
+    // const placeholder = document.getElementById("map-placeholder");
 
-    const fields = [...form.querySelectorAll('input[required], textarea[required], select[required]')];
-    const allValid = fields.every(f => validateField(f));
+    // const map = document.getElementById("google-map");
+    // if (map) {
+    //   map.style.display = "none";
+    // }
+    // if (placeholder) placeholder.style.display = "block";
+    const placeholder = document.getElementById("map-container");
+    placeholder.innerHTML = "";
+    placeholder.innerHTML = `<div class="map-placeholder map-placeholder--inline">
+              <span class="map-placeholder__pin">📍</span>
+              <p class="map-placeholder__text">Piazza San Rocco — Pedemonte</p>
+              <p class="map-placeholder__sub">
+                Per la mappa interattiva devi accettare i cookie in basso a
+                sinistra
+              </p>
+              <a
+                href="https://maps.app.goo.gl/TVq2CXMiTBKjQYqGA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary map-placeholder__directions"
+              >
+                🗺️ Apri su Google Maps
+              </a>
+            </div>`;
+  }
 
-    if (!allValid) {
-      // Scroll to first error
-      const firstError = form.querySelector('[style*="var(--coral)"]');
-      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    // ── NOTE ──────────────────────────────────────────────────
-    // This form does NOT send data anywhere by default.
-    // To make it functional, connect it to a backend service such as:
-    //   - Formspree (https://formspree.io) — just change the form action
-    //   - Netlify Forms — add netlify attribute to <form>
-    //   - EmailJS — call their API here
-    //
-    // Example with Formspree:
-    //   1. Set <form action="https://formspree.io/f/YOUR_ID" method="POST">
-    //   2. Remove the e.preventDefault() above
-    // ──────────────────────────────────────────────────────────
-
-    // Simulate success for now
-    const submitBtn = form.querySelector('.form-submit');
-    submitBtn.textContent = 'Invio in corso…';
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      form.reset();
-      form.querySelectorAll('input, textarea, select').forEach(f => {
-        f.style.borderColor = '';
-        f.style.boxShadow   = '';
-      });
-      successMsg && successMsg.classList.add('visible');
-      submitBtn.textContent = 'Invia messaggio →';
-      submitBtn.disabled = false;
-      successMsg && successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 800);
-  });
-
+  document.addEventListener("cookieConsentRejected", deactivateMap);
 });
