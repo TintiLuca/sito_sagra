@@ -70,6 +70,48 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll("[data-animate]")
     .forEach((el) => observer.observe(el));
 
+  // ── Gallery strip: mouse wheel + drag horizontal scroll ──
+  const galleryTrack = document.querySelector(".gallery-strip__track");
+  if (galleryTrack) {
+    // Vertical wheel scroll moves the strip horizontally
+    galleryTrack.addEventListener(
+      "wheel",
+      (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          galleryTrack.scrollLeft += e.deltaY;
+          e.preventDefault();
+        }
+      },
+      { passive: false },
+    );
+
+    // Click-and-drag scroll for mouse users
+    let isDragging = false;
+    let dragStartX = 0;
+    let scrollStart = 0;
+
+    galleryTrack.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      dragStartX = e.pageX;
+      scrollStart = galleryTrack.scrollLeft;
+      e.preventDefault(); // stops the browser's native image-drag ghost
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
+
+    galleryTrack.addEventListener("mouseleave", () => {
+      isDragging = false;
+    });
+
+    galleryTrack.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      galleryTrack.scrollLeft = scrollStart - (e.pageX - dragStartX);
+    });
+  }
+
   const policies = {
     cookie: `
               <div class="modal-content">

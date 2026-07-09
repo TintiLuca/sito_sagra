@@ -643,10 +643,42 @@
   overflow-x: auto;
   padding: 0 var(--space-lg) var(--space-md);
   scrollbar-width: none;
+  cursor: grab;
 }
 
 .gallery-strip__track::-webkit-scrollbar {
   display: none;
+}
+
+.gallery-strip__track:active {
+  cursor: grabbing;
+}
+
+/* Visible, styled scrollbar on desktop so it's clear the strip scrolls */
+@media (min-width: 900px) {
+  .gallery-strip__track {
+    scrollbar-width: thin;
+    scrollbar-color: var(--coral) var(--gray-light);
+  }
+
+  .gallery-strip__track::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+  }
+
+  .gallery-strip__track::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: var(--radius-full);
+  }
+
+  .gallery-strip__track::-webkit-scrollbar-thumb {
+    background: var(--coral);
+    border-radius: var(--radius-full);
+  }
+
+  .gallery-strip__track::-webkit-scrollbar-thumb:hover {
+    background: var(--dark);
+  }
 }
 
 .gallery-thumb {
@@ -659,10 +691,13 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  object-fit: cover;
   transition:
     transform var(--transition),
     box-shadow var(--transition);
   cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .gallery-thumb:hover {
