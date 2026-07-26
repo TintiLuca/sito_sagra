@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load map immediately if consent was already given on a previous visit
   if (window.CookieConsent && window.CookieConsent.accepted) {
     activateMap();
+  } else {
+    deactivateMap();
   }
 
   // Load map the moment the user accepts in the banner
