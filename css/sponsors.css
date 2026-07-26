@@ -199,8 +199,9 @@
 }
 
 .main-sponsor-card__logo-wrap {
-  width: 260px;
-  height: 120px;
+  height: 220px;
+  width: auto;
+  max-width: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,12 +209,12 @@
   border-radius: var(--radius-md);
   border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  padding: var(--space-lg);
 }
 
 .main-sponsor-card__logo-wrap img {
+  height: 100%;
+  width: auto;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
   display: block;
 }
@@ -327,21 +328,22 @@
 }
 
 .gold-card__logo-wrap {
-  width: 100%;
-  height: 90px;
+  height: 110px;
+  width: auto;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gray-light);
   border-radius: var(--radius-sm);
   border: 1.5px solid rgba(26, 26, 46, 0.07);
-  padding: var(--space-md);
   overflow: hidden;
 }
 
 .gold-card__logo-wrap img {
+  height: 100%;
+  width: auto;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
 }
 
@@ -391,41 +393,36 @@
 }
 
 .community-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--white);
   border: 1.5px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  width: 160px;
   height: 80px;
+  width: auto;
+  min-width: 110px;
+  max-width: 200px;
+  padding: 0 var(--space-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-md);
   text-decoration: none;
   overflow: hidden;
   transition:
-    background var(--transition),
     border-color var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .community-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .community-card img {
+  height: 100%;
+  width: auto;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.6;
-  transition: opacity var(--transition);
-}
-
-.community-card:hover img {
-  opacity: 1;
-  filter: none;
 }
 
 .community-card .sponsor-logo-placeholder {

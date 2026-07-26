@@ -389,8 +389,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <tr>
                           <td>Email</td>
                           <td>
-                            <a href="mailto:parrocchia1822@gmail.com"
-                              >parrocchia1822@gmail.com</a
+                            <a href="mailto:sagrapedemonte@gmail.com"
+                              >sagrapedemonte@gmail.com</a
                             >
                           </td>
                         </tr>
@@ -444,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </tr>
               <tr>
                 <td>Email</td>
-                <td><a href="mailto:parrocchia1822@gmail.com">parrocchia1822@gmail.com</a></td>
+                <td><a href="mailto:sagrapedemonte@gmail.com">sagrapedemonte@gmail.com</a></td>
               </tr>
             </table>
             <p>Il sito web è gestito tecnicamente da un collaboratore volontario per conto della Parrocchia.</p>
@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Le immagini e le fotografie pubblicate sul sito web provengono dalle passate edizioni della Sagra di Pedemonte, un evento svoltosi in luogo pubblico e di carattere manifesto. Tali immagini sono pubblicate esclusivamente a scopo documentativo, informativo e di promozione della Sagra, nel rispetto del diritto d'autore (Legge 633/1941) e del GDPR.</p>
             <p>Nessuna immagine viene utilizzata per ledere il decoro o la dignità dei soggetti ritratti. Nei casi in cui siano presenti minori in primo piano o soggetti facilmente identificabili non appartenenti allo staff, il Titolare applica, laddove possibile, tecniche di sfocatura (blurring) o seleziona scatti panoramici/di folla.</p>
             <div class="policy-box">
-              <p><strong>Diritto di rimozione (Opt-out):</strong> Se ti riconosci in una delle fotografie presenti sul sito e non desideri che la tua immagine (o quella di un minore di cui eserciti la responsabilità genitoriale) sia visibile online, puoi richiederne la rimozione immediata o l'oscuramento in qualsiasi momento scrivendo a <a href="mailto:parrocchia1822@gmail.com">parrocchia1822@gmail.com</a>. Provvederemo alla rimozione nel minor tempo possibile.</p>
+              <p><strong>Diritto di rimozione (Opt-out):</strong> Se ti riconosci in una delle fotografie presenti sul sito e non desideri che la tua immagine (o quella di un minore di cui eserciti la responsabilità genitoriale) sia visibile online, puoi richiederne la rimozione immediata o l'oscuramento in qualsiasi momento scrivendo a <a href="mailto:sagrapedemonte@gmail.com">sagrapedemonte@gmail.com</a>. Provvederemo alla rimozione nel minor tempo possibile.</p>
             </div>
           </section>
 
@@ -527,7 +527,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <li><strong>Portabilità</strong> — ricevere i tuoi dati in formato strutturato, laddove applicabile (art. 20 GDPR)</li>
               <li><strong>Revoca del consenso</strong> — revocare il consenso in qualsiasi momento, senza pregiudicare la liceità del trattamento effettuato prima della revoca</li>
             </ul>
-            <p>Per esercitare i tuoi diritti, puoi scrivere a <a href="mailto:parrocchia1822@gmail.com">parrocchia1822@gmail.com</a>. Risponderemo entro 30 giorni dalla ricezione della richiesta.</p>
+            <p>Per esercitare i tuoi diritti, puoi scrivere a <a href="mailto:sagrapedemonte@gmail.com">sagrapedemonte@gmail.com</a>. Risponderemo entro 30 giorni dalla ricezione della richiesta.</p>
             <p>Hai inoltre il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).</p>
           </section>
 
@@ -556,7 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <table class="policy-table">
               <tr>
                 <td>Email</td>
-                <td><a href="mailto:parrocchia1822@gmail.com">parrocchia1822@gmail.com</a></td>
+                <td><a href="mailto:sagrapedemonte@gmail.com">sagrapedemonte@gmail.com  </a></td>
               </tr>
               <tr>
                 <td>Titolare</td>

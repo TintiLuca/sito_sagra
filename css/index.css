@@ -731,7 +731,7 @@
 
 .sponsors-teaser__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-md);
 }
 
@@ -744,10 +744,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-md);
+  overflow: hidden;
   transition:
     transform var(--transition),
     box-shadow var(--transition);
+}
+
+.sponsor-teaser-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .sponsor-teaser-card:hover {

@@ -338,7 +338,7 @@
 }
 .artist-card-full__photo .ven {
   width: 100%;
-  height: 90%;
+  height: 80%;
   object-fit: cover;
 }
 
